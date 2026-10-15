@@ -979,119 +979,1183 @@ const courses = [
     },
   ],
 },
-  {
-    title: "Java Full Stack Development",
-    image: javaFullStack,
-    category: "Full Stack",
-    level: "Advanced",
-    duration: "6 - 8 Months",
-    mode: "Online Live",
-    description:
-      "Become a complete Java Full Stack Developer with frontend, backend and database skills.",
-    topics: [
-      "Core Java",
-      "Advanced Java",
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "React",
-      "Spring",
-      "Spring Boot",
-      "REST API",
-      "MySQL",
-      "JDBC",
-      "Hibernate",
-      "Git",
-      "GitHub",
-      "Authentication",
-      "Deployment",
-      "Real-Time Projects",
-    ],
-    modules: [
-      {
-        name: "HTML & CSS",
-        topics: [
-          "HTML5",
-          "Semantic HTML",
-          "Forms",
-          "Tables",
-          "CSS3",
-          "Flexbox",
-          "Grid",
-          "Responsive Design",
-        ],
-      },
-      {
-        name: "JavaScript",
-        topics: [
-          "JavaScript Basics",
-          "Variables",
-          "Functions",
-          "Arrays",
-          "Objects",
-          "DOM",
-          "Events",
-          "ES6",
-          "Promises",
-          "Async/Await",
-        ],
-      },
-      {
-        name: "React Development",
-        topics: [
-          "React Basics",
-          "Components",
-          "JSX",
-          "Props",
-          "State",
-          "Hooks",
-          "Forms",
-          "Routing",
-          "API Integration",
-        ],
-      },
-      {
-        name: "Java Backend",
-        topics: [
-          "Core Java",
-          "OOP",
-          "Collections",
-          "Exception Handling",
-          "Multithreading",
-          "JDBC",
-          "File Handling",
-        ],
-      },
-      {
-        name: "Spring Boot",
-        topics: [
-          "Spring Basics",
-          "Dependency Injection",
-          "Spring Boot",
-          "REST APIs",
-          "Spring Data JPA",
-          "Hibernate",
-          "Validation",
-          "Security Basics",
-        ],
-      },
-      {
-        name: "Database & Projects",
-        topics: [
-          "MySQL",
-          "SQL Queries",
-          "Joins",
-          "Subqueries",
-          "Stored Procedures",
-          "Database Design",
-          "Git & GitHub",
-          "Authentication",
-          "Deployment",
-          "Final Full Stack Project",
-        ],
-      },
-    ],
-  },
+ {
+  title: "Java Full Stack Development",
+  image: javaFullStack,
+  category: "Full Stack",
+  level: "Advanced",
+  duration: "6 - 8 Months",
+  mode: "Online Live",
+
+  description:
+    "Become a complete Java Full Stack Developer with strong frontend, Java backend, database, enterprise application, Spring Boot, Hibernate, REST API and deployment skills.",
+
+  topics: [
+    "Web Fundamentals",
+    "HTML5",
+    "CSS3",
+    "JavaScript ES5 & ES6",
+    "TypeScript",
+    "React JS",
+    "React Hooks",
+    "Redux",
+    "REST API Integration",
+    "Core Java",
+    "OOP",
+    "Collections Framework",
+    "Exception Handling",
+    "Multithreading",
+    "I/O Streams",
+    "Socket Programming",
+    "Java Reflection",
+    "Generics",
+    "Lambda Expressions",
+    "Java Modules",
+    "SQL",
+    "JDBC",
+    "MySQL",
+    "Java EE / JEE",
+    "Servlets",
+    "JSP",
+    "JSTL",
+    "Design Patterns",
+    "Maven",
+    "Spring Framework",
+    "Spring JDBC",
+    "Spring ORM",
+    "Hibernate",
+    "JPA",
+    "Spring Boot",
+    "Spring Boot REST API",
+    "Spring Boot MVC",
+    "Spring Boot Security",
+    "Microservices",
+    "Git",
+    "GitHub",
+    "Authentication",
+    "Deployment",
+    "Real-Time Projects"
+  ],
+
+  modules: [
+
+    // =====================================================
+    // MODULE 1 - WEB FUNDAMENTALS
+    // =====================================================
+    {
+      name: "Module 1 - Web Fundamentals",
+      topics: [
+        "Introduction to Web",
+        "What is Web?",
+        "Web Features",
+        "W3C and W3C Members",
+        "Introduction to WHATWG",
+        "Web Standards",
+        "Client-Server Architecture",
+        "Web Browsers",
+        "Web Servers",
+        "HTTP and HTTPS Basics"
+      ]
+    },
+
+    // =====================================================
+    // MODULE 2 - HTML
+    // =====================================================
+    {
+      name: "Module 2 - HTML5",
+      topics: [
+        "Core HTML",
+        "Introduction to HTML",
+        "Parts of HTML Document",
+        "Document Version Information",
+        "Head Section",
+        "Meta Information",
+        "Favicons",
+        "Body Section",
+        "HTML Headings",
+        "Paragraphs",
+        "Lists",
+        "Tables",
+        "Anchors",
+        "Images",
+        "HTML Forms",
+        "Form Controls",
+        "Input Types",
+        "Advanced HTML5",
+        "HTML5 History",
+        "Why HTML5?",
+        "HTML5 New Features",
+        "HTML5 Structure",
+        "Structure of HTML5 Document",
+        "Power of HTML5",
+        "HTML5 Semantics",
+        "Block Level Elements",
+        "HTML5 Forms",
+        "HTML5 Multimedia",
+        "HTML5 Graphics",
+        "Canvas",
+        "SVG"
+      ]
+    },
+
+    // =====================================================
+    // MODULE 3 - CSS
+    // =====================================================
+    {
+      name: "Module 3 - CSS3",
+      topics: [
+        "Core CSS",
+        "Introduction to CSS",
+        "CSS Basics",
+        "CSS Syntax",
+        "CSS Versions",
+        "CSS Selectors",
+        "CSS ID and Class",
+        "CSS Styling",
+        "Background Styling",
+        "Text Styling",
+        "Font Styling",
+        "CSS Borders",
+        "CSS Box Model",
+        "CSS3 Modules",
+        "Advanced Selectors",
+        "Backgrounds and Borders",
+        "Text Effects",
+        "2D Transformations",
+        "3D Transformations",
+        "CSS Animations",
+        "Advanced Animations",
+        "Multiple Column Layout",
+        "User Interface Styling",
+        "Flexbox",
+        "CSS Grid",
+        "Responsive Web Design",
+        "Media Queries"
+      ]
+    },
+
+    // =====================================================
+    // MODULE 4 - JAVASCRIPT
+    // =====================================================
+    {
+      name: "Module 4 - JavaScript ES5 & ES6",
+      topics: [
+        "Introduction to JavaScript",
+        "JavaScript Basics",
+        "Variables",
+        "Data Types",
+        "Operators",
+        "Functions",
+        "Arrays",
+        "Objects",
+        "DOM",
+        "BOM",
+        "Events",
+        "Intervals",
+        "Objects and Prototypes",
+        "Hoisting",
+        "Closures",
+        "Let",
+        "Const",
+        "Arrow Functions",
+        "Classes",
+        "Inheritance",
+        "Map",
+        "Filter",
+        "Reduce",
+        "Template Literals",
+        "forEach",
+        "for-in Loop",
+        "for-of Loop",
+        "Promises",
+        "Async/Await",
+        "Fetch API",
+        "JSON",
+        "Exception Handling"
+      ]
+    },
+
+    // =====================================================
+    // MODULE 5 - TYPESCRIPT
+    // =====================================================
+    {
+      name: "Module 5 - TypeScript",
+      topics: [
+        "Introduction to TypeScript",
+        "Why TypeScript?",
+        "TypeScript Installation",
+        "Basic Types",
+        "Variables and Types",
+        "Functions",
+        "Classes",
+        "Interfaces",
+        "Inheritance",
+        "Modules",
+        "TypeScript with React"
+      ]
+    },
+
+    // =====================================================
+    // MODULE 6 - REACT
+    // =====================================================
+    {
+      name: "Module 6 - React JS",
+      topics: [
+        "Introduction to React JS",
+        "What is React JS?",
+        "What is SPA?",
+        "DOM vs Virtual DOM",
+        "Advantages and Disadvantages",
+        "Key Features of React",
+        "Node.js Installation",
+        "NPM Installation",
+        "React CLI / Project Setup",
+        "Project Directory Structure",
+        "Code Editors",
+        "How React Application Boots",
+        "React Concepts",
+        "JSX",
+        "TSX",
+        "Render Elements",
+        "Function Components",
+        "Class Components",
+        "Props",
+        "State",
+        "Event Handling",
+        "Dynamic Data Rendering",
+        "Property Binding",
+        "Conditional Rendering",
+        "Lists and Keys",
+        "Forms",
+        "Form Handling",
+        "Form Validation"
+      ]
+    },
+
+    // =====================================================
+    // MODULE 7 - REACT ADVANCED
+    // =====================================================
+    {
+      name: "Module 7 - Advanced React",
+      topics: [
+        "Component Lifecycle",
+        "Understanding Component Lifecycle",
+        "Lifecycle Hooks",
+        "React Event System",
+        "Passing Arguments to Event Handlers",
+        "Network Calls",
+        "Fetch",
+        "Axios",
+        "Custom Services",
+        "Introduction to Services",
+        "Building Services",
+        "Local Storage",
+        "Session Storage",
+        "Cookies",
+        "React Router",
+        "Route Configuration",
+        "Dynamic Routes",
+        "Route Parameters",
+        "Nested Routes",
+        "Link and NavLink",
+        "Redirect Routes",
+        "UI Components",
+        "Third-Party Modules"
+      ]
+    },
+
+    // =====================================================
+    // MODULE 8 - REDUX
+    // =====================================================
+    {
+      name: "Module 8 - Redux & State Management",
+      topics: [
+        "Introduction to Redux",
+        "Why Redux?",
+        "Redux Installation",
+        "Redux Setup",
+        "Store",
+        "Reducers",
+        "Actions",
+        "Dispatchers",
+        "Higher Order Components",
+        "mapStateToProps",
+        "mapDispatchToProps",
+        "Advanced Redux",
+        "Async Actions",
+        "Middleware",
+        "Redux Thunk",
+        "Redux Saga",
+        "React Hooks",
+        "Why Hooks?",
+        "useState",
+        "useEffect",
+        "useReducer",
+        "useRef",
+        "Custom Hooks",
+        "Rules of Hooks"
+      ]
+    },
+
+    // =====================================================
+    // MODULE 9 - REACT REAL-TIME FEATURES
+    // =====================================================
+    {
+      name: "Module 9 - React Application Development",
+      topics: [
+        "Social Login",
+        "Pagination",
+        "Search",
+        "Filtering",
+        "JWT Authentication",
+        "File Upload",
+        "REST API Integration",
+        "CRUD Operations",
+        "API Error Handling",
+        "Protected Routes",
+        "Role-Based Access",
+        "Jest Testing",
+        "Enzyme",
+        "React Application Testing",
+        "React Application Deployment",
+        "Production Build",
+        "Application Hosting"
+      ]
+    },
+
+    // =====================================================
+    // MODULE 10 - CORE JAVA
+    // =====================================================
+    {
+      name: "Module 10 - Introduction to Java",
+      topics: [
+        "Why Java was Developed",
+        "Application Areas of Java",
+        "History of Java",
+        "Platform Independency",
+        "Java Features",
+        "Sun-Oracle Deal",
+        "Different Java Platforms",
+        "JDK",
+        "JRE",
+        "JVM",
+        "Difference Between JDK, JRE and JVM",
+        "Java Versions",
+        "JVM Architecture",
+        "Installing Java on Windows",
+        "PATH Variable",
+        "Understanding PATH Configuration",
+        "Creating First Java Program",
+        "Text Editors",
+        "Compiling Java Files",
+        "Byte Code",
+        "Class Files",
+        "Running Java Programs"
+      ]
+    },
+
+    // =====================================================
+    // MODULE 11 - JAVA FUNDAMENTALS
+    // =====================================================
+    {
+      name: "Module 11 - Java Language Fundamentals",
+      topics: [
+        "Identifiers",
+        "Keywords",
+        "Variables",
+        "Literals",
+        "Data Types",
+        "Operators",
+        "Comments",
+        "Looping Statements",
+        "Conditional Statements",
+        "Type Casting",
+        "Upcasting",
+        "Downcasting"
+      ]
+    },
+
+    // =====================================================
+    // MODULE 12 - OOP
+    // =====================================================
+    {
+      name: "Module 12 - Object Oriented Programming",
+      topics: [
+        "Why OOP?",
+        "OOP Concepts with Real-Life Examples",
+        "Class and Syntax",
+        "Objects and Syntax",
+        "Reference Variables",
+        "Constructors",
+        "Instance Variables",
+        "Static Variables",
+        "Instance Methods",
+        "Static Methods",
+        "this Keyword",
+        "Object Initializers",
+        "Static Initializers",
+        "Anonymous Blocks",
+        "Inheritance",
+        "Types of Inheritance",
+        "Object Class",
+        "Variable Hiding",
+        "Method Hiding",
+        "Method Overriding",
+        "Method Overloading",
+        "super Keyword",
+        "final Keyword",
+        "Constructor Chaining",
+        "Static Binding",
+        "Dynamic Binding",
+        "Runtime Polymorphism",
+        "Abstract Classes",
+        "Abstract Methods",
+        "Interfaces",
+        "Encapsulation",
+        "Association"
+      ]
+    },
+
+    // =====================================================
+    // MODULE 13 - PACKAGES, ARRAYS & WRAPPERS
+    // =====================================================
+    {
+      name: "Module 13 - Packages, Arrays & Wrapper Classes",
+      topics: [
+        "Understanding Packages",
+        "Setting Classpath",
+        "Access Modifiers",
+        "Within Package Access",
+        "Outside Package Access",
+        "implements Keyword",
+        "Nested Types",
+        "Static Nested Class",
+        "Non-Static Nested Class",
+        "Local Class",
+        "Anonymous Class",
+        "Nested Interface",
+        "Arrays",
+        "1-D Arrays",
+        "2-D Arrays",
+        "Jagged Arrays",
+        "Array of Reference Types",
+        "Array Operations",
+        "User Defined Arrays",
+        "Object Type Arrays",
+        "Command Line Arguments",
+        "Wrapper Classes",
+        "Parsing Numeric Strings",
+        "String Representation of Primitives"
+      ]
+    },
+
+    // =====================================================
+    // MODULE 14 - EXCEPTION & STRINGS
+    // =====================================================
+    {
+      name: "Module 14 - Exception Handling & Strings",
+      topics: [
+        "Runtime Errors",
+        "Exceptions",
+        "Exception Class Hierarchy",
+        "try and catch",
+        "Catch Block Patterns",
+        "Nested try",
+        "throw",
+        "throws",
+        "finally",
+        "Custom Exceptions",
+        "Checked Exceptions",
+        "Unchecked Exceptions",
+        "Assertions",
+        "String Class",
+        "Creating String Objects",
+        "String Operations",
+        "StringBuffer",
+        "StringBuilder",
+        "String vs StringBuffer",
+        "StringBuffer vs StringBuilder"
+      ]
+    },
+
+    // =====================================================
+    // MODULE 15 - ADVANCED JAVA
+    // =====================================================
+    {
+      name: "Module 15 - Advanced Java Concepts",
+      topics: [
+        "Reflection",
+        "Need for Reflection",
+        "Class Modifiers",
+        "Fields",
+        "Methods",
+        "Constructors",
+        "Super Classes",
+        "Interface Information",
+        "Runtime Class Creation",
+        "Accessing Object Fields",
+        "Invoking Methods at Runtime",
+        "Invoking Private Methods",
+        "Generics",
+        "Lambda Expressions",
+        "Annotations",
+        "Object Cloning",
+        "Varargs",
+        "Static Import",
+        "Enum",
+        "Static Interface Methods",
+        "Default Interface Methods",
+        "Private Interface Methods",
+        "var Type",
+        "Java Modules"
+      ]
+    },
+
+    // =====================================================
+    // MODULE 16 - COLLECTIONS
+    // =====================================================
+    {
+      name: "Module 16 - Collections Framework",
+      topics: [
+        "What is Collection?",
+        "What is Framework?",
+        "Collections Framework",
+        "Core Interfaces",
+        "Collection",
+        "List",
+        "Queue",
+        "Deque",
+        "Set",
+        "NavigableSet",
+        "SortedSet",
+        "Map",
+        "NavigableMap",
+        "SortedMap",
+        "ArrayList",
+        "LinkedList",
+        "PriorityQueue",
+        "ArrayDeque",
+        "HashSet",
+        "LinkedHashSet",
+        "TreeSet",
+        "HashMap",
+        "IdentityHashMap",
+        "WeakHashMap",
+        "LinkedHashMap",
+        "TreeMap",
+        "Iterator",
+        "ListIterator",
+        "for-each Loop",
+        "User Defined Objects",
+        "Comparator",
+        "Comparable",
+        "Legacy Classes",
+        "Enumeration",
+        "Vector",
+        "Stack",
+        "Hashtable",
+        "Properties"
+      ]
+    },
+
+    // =====================================================
+    // MODULE 17 - MULTITHREADING
+    // =====================================================
+    {
+      name: "Module 17 - Multithreaded Programming",
+      topics: [
+        "Multitasking",
+        "Concurrent Execution",
+        "Multiprocessing vs Multithreading",
+        "Main Thread",
+        "Creating Child Threads",
+        "Context Switching",
+        "Thread States",
+        "Thread Group",
+        "Thread Synchronization",
+        "Synchronization Methods",
+        "Synchronization Blocks",
+        "Inter-Thread Communication",
+        "Daemon Threads",
+        "Deadlock"
+      ]
+    },
+
+    // =====================================================
+    // MODULE 18 - I/O & SOCKET
+    // =====================================================
+    {
+      name: "Module 18 - I/O Streams & Socket Programming",
+      topics: [
+        "Introduction to I/O",
+        "Need for Streams",
+        "Byte Streams",
+        "Character Streams",
+        "File Read Operations",
+        "File Write Operations",
+        "Scanner Class",
+        "Object Serialization",
+        "Object Deserialization",
+        "Transient Keyword",
+        "File Class",
+        "Network Fundamentals",
+        "Socket",
+        "ServerSocket",
+        "InetAddress",
+        "DatagramSocket",
+        "DatagramPacket",
+        "URL",
+        "URLConnection",
+        "HttpURLConnection",
+        "Stream API"
+      ]
+    },
+
+    // =====================================================
+    // MODULE 19 - SQL
+    // =====================================================
+    {
+      name: "Module 19 - SQL & Database Programming",
+      topics: [
+        "Introduction to SQL",
+        "Database Fundamentals",
+        "Relational Databases",
+        "Database Tables",
+        "Primary Key",
+        "Foreign Key",
+        "Constraints",
+        "DDL",
+        "DML",
+        "DQL",
+        "TCL",
+        "DCL",
+        "SELECT",
+        "INSERT",
+        "UPDATE",
+        "DELETE",
+        "WHERE",
+        "ORDER BY",
+        "GROUP BY",
+        "HAVING",
+        "Aggregate Functions",
+        "Joins",
+        "Subqueries",
+        "Views",
+        "Stored Procedures",
+        "Functions",
+        "Transactions",
+        "MySQL",
+        "Oracle",
+        "MongoDB",
+        "Database Design"
+      ]
+    },
+
+    // =====================================================
+    // MODULE 20 - JDBC
+    // =====================================================
+    {
+      name: "Module 20 - JDBC",
+      topics: [
+        "Need for JDBC",
+        "JDBC Architecture",
+        "JDBC Drivers",
+        "DriverManager",
+        "Connection",
+        "Statement",
+        "PreparedStatement",
+        "CallableStatement",
+        "ResultSet",
+        "Scrollable ResultSet",
+        "Updatable ResultSet",
+        "Batch Updates",
+        "Transactions",
+        "Commit",
+        "Rollback",
+        "Database Metadata",
+        "Connecting Java Application with MySQL",
+        "CRUD Operations using JDBC"
+      ]
+    },
+
+    // =====================================================
+    // MODULE 21 - JAVA EE / JEE
+    // =====================================================
+    {
+      name: "Module 21 - Java EE / JEE",
+      topics: [
+        "Introduction to Java EE",
+        "JEE Specification",
+        "Java EE Architecture",
+        "Single Tier Architecture",
+        "Two Tier Architecture",
+        "Three Tier Architecture",
+        "N-Tier Architecture",
+        "Java EE Components",
+        "Web Components",
+        "Business Components",
+        "Distributed Components",
+        "Java EE Containers",
+        "Application Servers",
+        "Web Containers",
+        "Apache Tomcat",
+        "EJB Containers",
+        "WebLogic",
+        "GlassFish",
+        "WebSphere",
+        "JNDI Service",
+        "Java Transaction Service",
+        "JAAS",
+        "JMS"
+      ]
+    },
+
+    // =====================================================
+    // MODULE 22 - SERVLETS
+    // =====================================================
+    {
+      name: "Module 22 - Java Servlets",
+      topics: [
+        "Introduction to Web Programming",
+        "Role of Servlet",
+        "Servlet Lifecycle",
+        "Servlet Annotations",
+        "@WebServlet",
+        "@WebInitParam",
+        "@WebListener",
+        "@WebFilter",
+        "@MultipartConfig",
+        "Request Dispatching",
+        "Request Parameters",
+        "Request Attributes",
+        "ServletConfig",
+        "ServletContext",
+        "File Uploading",
+        "File Downloading",
+        "Session Tracking",
+        "State Management",
+        "Cookies",
+        "URL Rewriting",
+        "Hidden Form Fields",
+        "Session Object",
+        "Events and Listeners",
+        "Dependency Injection",
+        "Servlet Refreshing",
+        "Filters"
+      ]
+    },
+
+    // =====================================================
+    // MODULE 23 - JSP
+    // =====================================================
+    {
+      name: "Module 23 - JSP & JSTL",
+      topics: [
+        "JSP Architecture",
+        "JSP Elements",
+        "JSP Objects",
+        "JavaBeans",
+        "Custom Tags",
+        "JSTL",
+        "JSTL Tags",
+        "Expression Language",
+        "JSP with Servlets",
+        "Dynamic Web Applications"
+      ]
+    },
+
+    // =====================================================
+    // MODULE 24 - JAVA PROJECT DEVELOPMENT
+    // =====================================================
+    {
+      name: "Module 24 - Java Web Project Development",
+      topics: [
+        "Frontend Coding",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Bootstrap",
+        "Form Designing",
+        "Backend Coding",
+        "Database Designing",
+        "Connecting Forms to Database",
+        "Business Logic",
+        "CRUD Application",
+        "Project Hosting"
+      ]
+    },
+
+    // =====================================================
+    // MODULE 25 - DESIGN PATTERNS
+    // =====================================================
+    {
+      name: "Module 25 - Design Patterns",
+      topics: [
+        "Why Design Patterns?",
+        "Front Controller Pattern",
+        "Composite View Pattern",
+        "Factory Pattern",
+        "Singleton Pattern",
+        "DAO Pattern",
+        "MVC Architecture"
+      ]
+    },
+
+    // =====================================================
+    // MODULE 26 - SPRING FRAMEWORK
+    // =====================================================
+    {
+      name: "Module 26 - Spring Framework",
+      topics: [
+        "Introduction to Spring",
+        "What is Spring?",
+        "Spring Modules",
+        "Dependency Injection",
+        "Inversion of Control",
+        "Bean Management",
+        "Aspect-Oriented Programming",
+        "AOP Concepts",
+        "Spring Configuration",
+        "Spring Application Context"
+      ]
+    },
+
+    // =====================================================
+    // MODULE 27 - SPRING JDBC
+    // =====================================================
+    {
+      name: "Module 27 - Spring Data Access & JDBC",
+      topics: [
+        "Spring Data Access Philosophy",
+        "Configuring Data Source",
+        "Using JDBC with Spring",
+        "Spring JdbcTemplate",
+        "Spring DAO Support Classes",
+        "Database Connectivity",
+        "CRUD Operations",
+        "Transaction Management"
+      ]
+    },
+
+    // =====================================================
+    // MODULE 28 - SPRING BEAN WIRING
+    // =====================================================
+    {
+      name: "Module 28 - Spring Bean Wiring",
+      topics: [
+        "Spring Beans",
+        "Bean Containers",
+        "Creating Beans",
+        "Injecting Bean Properties",
+        "Dependency Injection",
+        "Autowiring",
+        "Bean Lifecycle",
+        "Controlling Bean Creation",
+        "Configuration using Annotations"
+      ]
+    },
+
+    // =====================================================
+    // MODULE 29 - JAVA MAIL & DISTRIBUTED PROGRAMMING
+    // =====================================================
+    {
+      name: "Module 29 - Java Mail & Distributed Programming",
+      topics: [
+        "Java Mail API",
+        "Email System",
+        "Email Protocols",
+        "Sending Emails",
+        "Receiving Emails",
+        "Email Attachments",
+        "Distributed Programming",
+        "RMI",
+        "Web Services",
+        "RESTful Services",
+        "@Path",
+        "@PathParam",
+        "@FormParam",
+        "@QueryParam",
+        "@DefaultValue"
+      ]
+    },
+
+    // =====================================================
+    // MODULE 30 - JPA
+    // =====================================================
+    {
+      name: "Module 30 - JPA Framework",
+      topics: [
+        "Overview of JPA",
+        "JPA Architecture",
+        "JPA Entities",
+        "Entity Mapping",
+        "Persistence",
+        "Relationships",
+        "JPA with Hibernate",
+        "JPA Repository Concepts"
+      ]
+    },
+
+    // =====================================================
+    // MODULE 31 - HIBERNATE
+    // =====================================================
+    {
+      name: "Module 31 - Hibernate ORM",
+      topics: [
+        "Introduction to ORM",
+        "Need for ORM",
+        "Problems with Direct JDBC",
+        "ORM Implementation",
+        "Introduction to Hibernate",
+        "Hibernate Architecture",
+        "Hibernate Configuration",
+        "Hibernate Support for Other Technologies",
+        "Installing Hibernate",
+        "Hello World Hibernate Application",
+        "Creating Persistent Classes",
+        "Mapping Java Classes",
+        "Mapping Basic Classes",
+        "Mapping Binary Data",
+        "Mapping Serializable Classes",
+        "Mapping Date and Calendar Attributes",
+        "Read-Only Classes",
+        "Versioning and Timestamps"
+      ]
+    },
+
+    // =====================================================
+    // MODULE 32 - HIBERNATE MAPPING
+    // =====================================================
+    {
+      name: "Module 32 - Hibernate Mapping & Collections",
+      topics: [
+        "Inheritance Mapping",
+        "Table Per Class Hierarchy",
+        "Table Per Subclass Hierarchy",
+        "Table Per Concrete Class",
+        "Persistence Interfaces",
+        "Associations",
+        "Lazy Initialization",
+        "Mapping Maps",
+        "Sorted Maps",
+        "Mapping Sets",
+        "Sorted Sets",
+        "Mapping Lists",
+        "Mapping Arrays",
+        "Bidirectional Associations",
+        "Hibernate Relationships",
+        "Hibernate CRUD Operations"
+      ]
+    },
+
+    // =====================================================
+    // MODULE 33 - MAVEN
+    // =====================================================
+    {
+      name: "Module 33 - Maven & Build Management",
+      topics: [
+        "Introduction to Maven",
+        "Maven Configuration",
+        "pom.xml",
+        "Maven Project Structure",
+        "Dependencies",
+        "Plugins",
+        "Repositories",
+        "Converting Maven Projects to Eclipse",
+        "Maven Lifecycle",
+        "Maven Commands",
+        "Build Management",
+        "Dependency Management"
+      ]
+    },
+
+    // =====================================================
+    // MODULE 34 - SPRING BOOT
+    // =====================================================
+    {
+      name: "Module 34 - Spring Boot",
+      topics: [
+        "Introduction to Spring Boot",
+        "Spring Boot Architecture",
+        "Spring Boot Project Setup",
+        "Spring Boot Starter Dependencies",
+        "Spring Boot Annotations",
+        "Spring Boot Configuration",
+        "Application Properties",
+        "Spring Boot and JdbcTemplate",
+        "Spring Boot and JPA",
+        "Spring Boot and Hibernate",
+        "Spring Boot MVC",
+        "Spring Boot REST API",
+        "REST Controllers",
+        "Request Mapping",
+        "Path Variables",
+        "Request Parameters",
+        "Request Body",
+        "Response Entity",
+        "Exception Handling",
+        "Validation",
+        "Spring Boot Security",
+        "Authentication",
+        "Authorization",
+        "JWT Authentication",
+        "Role-Based Access Control"
+      ]
+    },
+
+    // =====================================================
+    // MODULE 35 - SPRING BOOT ADVANCED
+    // =====================================================
+    {
+      name: "Module 35 - Spring Boot Advanced & Microservices",
+      topics: [
+        "Spring Boot REST API Development",
+        "Spring Data JPA",
+        "Hibernate Integration",
+        "Pagination",
+        "Sorting",
+        "Filtering",
+        "DTO Pattern",
+        "Entity Relationships",
+        "Global Exception Handling",
+        "Logging",
+        "API Documentation",
+        "Microservices Introduction",
+        "Microservices Architecture",
+        "Service-to-Service Communication",
+        "REST Based Microservices",
+        "Configuration Management"
+      ]
+    },
+
+    // =====================================================
+    // MODULE 36 - INTERNATIONALIZATION
+    // =====================================================
+    {
+      name: "Module 36 - Internationalization",
+      topics: [
+        "System Properties",
+        "Internationalization",
+        "Understanding Locale",
+        "Resource Bundle",
+        "Properties Files",
+        "Fetching Text from Resource Bundle",
+        "Displaying Text in Different Languages",
+        "Displaying Hindi Text",
+        "Displaying Dates in Hindi",
+        "Date Formatting"
+      ]
+    },
+
+    // =====================================================
+    // MODULE 37 - GIT & GITHUB
+    // =====================================================
+    {
+      name: "Module 37 - Git & GitHub",
+      topics: [
+        "Introduction to Git",
+        "Git Installation",
+        "Git Configuration",
+        "Git Repository",
+        "git init",
+        "git clone",
+        "git add",
+        "git commit",
+        "git status",
+        "git push",
+        "git pull",
+        "git fetch",
+        "Branches",
+        "Merge",
+        "Conflict Resolution",
+        "GitHub Repository",
+        "Remote Repository",
+        "Pull Requests",
+        "Collaborative Development"
+      ]
+    },
+
+    // =====================================================
+    // MODULE 38 - AUTHENTICATION & SECURITY
+    // =====================================================
+    {
+      name: "Module 38 - Authentication & Security",
+      topics: [
+        "Authentication Fundamentals",
+        "Authorization",
+        "Login and Registration",
+        "Password Security",
+        "JWT",
+        "JWT Token Generation",
+        "JWT Token Validation",
+        "Role-Based Authorization",
+        "Spring Security",
+        "Protected APIs",
+        "React Authentication",
+        "Protected Routes",
+        "Logout",
+        "Session Management"
+      ]
+    },
+
+    // =====================================================
+    // MODULE 39 - DEPLOYMENT
+    // =====================================================
+    {
+      name: "Module 39 - Application Deployment",
+      topics: [
+        "Application Build",
+        "Maven Build",
+        "JAR Files",
+        "WAR Files",
+        "Tomcat Deployment",
+        "Backend Deployment",
+        "Frontend Deployment",
+        "Database Configuration",
+        "Environment Variables",
+        "Production Configuration",
+        "API Configuration",
+        "Application Hosting",
+        "Domain Configuration",
+        "Basic Cloud Deployment"
+      ]
+    },
+
+    // =====================================================
+    // MODULE 40 - REAL-TIME PROJECTS
+    // =====================================================
+    {
+      name: "Module 40 - Real-Time Full Stack Projects",
+      topics: [
+        "Project Requirement Analysis",
+        "Project Architecture",
+        "UI Design",
+        "Frontend Development",
+        "React Development",
+        "Backend Development",
+        "Spring Boot REST APIs",
+        "MySQL Integration",
+        "Hibernate/JPA Integration",
+        "Authentication",
+        "Authorization",
+        "JWT",
+        "CRUD Operations",
+        "Search",
+        "Filtering",
+        "Pagination",
+        "File Upload",
+        "API Integration",
+        "Testing",
+        "Git & GitHub",
+        "Maven Build",
+        "Application Deployment",
+        "Project Documentation",
+        "Project Presentation",
+        "Interview Preparation"
+      ]
+    }
+  ]
+},
   {
     title: "Python Full Stack Development",
     image: pythonFullStack,
@@ -1300,928 +2364,1967 @@ const courses = [
       },
     ],
   },
+{
+  title: "Data Analyst with Generative AI",
+  image: dataAnalytics,
+  category: "Data & Analytics",
+  level: "Beginner",
+  duration: "4 - 5 Months",
+  mode: "Online Live",
+  badge: "Popular",
+
+  description:
+    "Become a job-ready Data Analyst with Python, Statistics, Machine Learning, SQL, Excel, Tableau, Power BI, Generative AI and real-time project experience.",
+
+  topics: [
+    "Python for Data Analytics",
+    "Python Programming",
+    "Object-Oriented Programming",
+    "Python Data Structures",
+    "File Handling",
+    "Pandas",
+    "NumPy",
+    "Data Cleaning",
+    "Data Analysis",
+    "Data Science",
+    "Statistics",
+    "Probability",
+    "Hypothesis Testing",
+    "Exploratory Data Analysis",
+    "Feature Engineering",
+    "Machine Learning",
+    "Linear Regression",
+    "Logistic Regression",
+    "KNN",
+    "Decision Trees",
+    "Random Forest",
+    "Support Vector Machine",
+    "Ensemble Learning",
+    "Data Visualization",
+    "SQL",
+    "Excel",
+    "Power Query",
+    "Power Pivot",
+    "Tableau",
+    "Power BI",
+    "DAX",
+    "Generative AI",
+    "Prompt Engineering",
+    "ChatGPT",
+    "Gemini",
+    "Claude",
+    "Perplexity",
+    "Git",
+    "GitHub",
+    "Real-Time Projects",
+    "Resume Preparation",
+    "Mock Interviews",
+  ],
+
+  modules: [
+
+    // =====================================================
+    // MODULE 1 - PYTHON FOR DATA ANALYTICS
+    // =====================================================
+    {
+      name: "Module 1 - Python for Data Analytics",
+      topics: [
+        // Python Basics
+        "Need for Programming",
+        "Advantages of Programming",
+        "Overview of Python",
+        "Organizations Using Python",
+        "Python Applications in Various Domains",
+        "Python Installation",
+        "Variables",
+        "Operands and Expressions",
+        "Conditional Statements",
+        "Loops",
+
+        // Functions & OOP
+        "User-Defined Functions",
+        "Return Statement",
+        "__main__ Concept",
+        "Function Parameters",
+        "Different Types of Arguments",
+        "Global Variables",
+        "Global Keyword",
+        "Command Line Arguments",
+        "User Input",
+        "eval() Function",
+        "Variable Scope",
+        "Returning Values",
+        "Lambda Functions",
+        "Built-in Functions",
+        "Introduction to Object-Oriented Programming",
+        "Built-in Class Attributes",
+        "Public Attributes",
+        "Protected Attributes",
+        "Private Attributes and Methods",
+        "Class Variables",
+        "Instance Variables",
+        "Constructor",
+        "Destructor",
+        "Decorators",
+        "Core Object-Oriented Principles",
+        "Inheritance and Types",
+        "Method Resolution Order",
+        "Overloading",
+        "Overriding",
+        "Getter and Setter Methods",
+        "Inheritance Case Study",
+
+        // Data Structures & File Operations
+        "Python File Input and Output",
+        "Lists",
+        "Tuples",
+        "Strings",
+        "Sets",
+        "Dictionaries",
+        "Data Structures and File Operations",
+        "JSON Module",
+        "Regular Expressions",
+        "Exception Handling",
+
+        // Pandas
+        "Introduction to Pandas",
+        "Pandas Data Structures",
+        "Series",
+        "DataFrames",
+        "Importing and Exporting Files",
+        "Basic Functionalities of Data Objects",
+        "Merging Data Objects",
+        "Concatenation of Data Objects",
+        "Data Manipulation using Pandas",
+        "Basics of Data Analysis",
+
+        // NumPy
+        "Introduction to NumPy",
+        "NumPy Arrays",
+        "Operations on Arrays",
+        "Indexing",
+        "Slicing",
+        "Iterating",
+        "NumPy Array Attributes",
+        "Matrix Product",
+        "NumPy Functions",
+        "Array Manipulation",
+        "File Handling using NumPy",
+        "Array Creation and Logic Functions",
+
+        // Libraries & Data Cleaning
+        "Standard Libraries",
+        "Packages and Import Statements",
+        "Reload Function",
+        "Important Python Modules",
+        "Sys Module",
+        "OS Module",
+        "Math Module",
+        "Date-Time Module",
+        "Random Module",
+        "Working with Modules",
+        "Handling Exceptions",
+        "Data Cleaning using Pandas",
+        "Exploring Datasets",
+      ],
+    },
+
+    // =====================================================
+    // MODULE 2 - DATA SCIENCE PRIMER & STATISTICS
+    // =====================================================
+    {
+      name: "Module 2 - Data Science Primer and Statistics",
+      topics: [
+        // Data Science
+        "What is Data Science?",
+        "What Does Data Science Involve?",
+        "Era of Data Science",
+        "Business Intelligence vs Data Science",
+        "Life Cycle of Data Science",
+        "Tools of Data Science",
+        "Applications of Data Science",
+        "Basics of Data Science",
+
+        // Feature Engineering
+        "What is a Feature?",
+        "Feature Engineering",
+        "Feature Engineering Process",
+        "Benefits of Feature Engineering",
+        "Feature Engineering Techniques",
+
+        // Exploratory Data Analysis
+        "Introduction to EDA",
+        "Stages of Analytics",
+        "CRISP-DM Data Life Cycle",
+        "Data Types",
+        "Exploratory Data Analysis",
+        "First Business Moment Decision",
+        "Second Business Moment Decision",
+        "Third Business Moment Decision",
+        "Fourth Business Moment Decision",
+        "Correlation",
+
+        // Statistics & Probability
+        "Basics of Probability",
+        "Discrete Probability Distributions",
+        "Continuous Probability Distributions",
+        "Central Limit Theorem",
+        "Inferential Statistics",
+        "Hypothesis Testing",
+        "Null Hypothesis",
+        "Alternate Hypothesis",
+        "Making a Decision",
+        "Critical Value Method",
+        "P-Value Method",
+        "Types of Errors",
+        "Two-Sample Mean Test",
+        "Proportion Test",
+        "A/B Testing",
+      ],
+    },
+
+    // =====================================================
+    // MODULE 3 - MACHINE LEARNING
+    // =====================================================
+    {
+      name: "Module 3 - Machine Learning",
+      topics: [
+        // Linear Regression
+        "Simple Linear Regression",
+        "Simple Linear Regression in Python",
+        "Multiple Linear Regression",
+        "Multiple Linear Regression in Python",
+        "Industry Relevance of Linear Regression",
+
+        // KNN
+        "Data Mining Classifier Technique",
+        "Application of KNN Classifier",
+        "Lazy Learner Classifier",
+        "Hyperparameter K",
+        "Altering Hyperparameter K for Better Accuracy",
+
+        // Logistic Regression
+        "Univariate Logistic Regression",
+        "Multivariate Logistic Regression",
+        "Model Building and Evaluation",
+        "Logistic Regression Industry Applications",
+
+        // Support Vector Machine
+        "Black Box",
+        "SVM Hyperplane",
+        "Maximum Margin Hyperplane",
+        "Kernel Tricks for Non-Linear Spaces",
+        "Support Vector Classifier",
+
+        // Decision Tree
+        "Rule-Based Classification Method",
+        "Different Nodes for Developing Decision Trees",
+        "Discretization",
+        "Entropy",
+        "Decision Tree Classifier",
+        "Greedy Approach",
+        "Information Gain",
+
+        // Ensemble Learning
+        "Challenges with Standalone Models",
+        "Reliability and Performance of Standalone Models",
+        "Homogeneous Ensemble Technique",
+        "Heterogeneous Ensemble Technique",
+        "Bagging",
+        "Boosting",
+        "Ensemble Learning",
+        "Random Forest",
+        "Stacking",
+        "Voting Technique",
+        "Averaging Technique",
+      ],
+    },
+
+    // =====================================================
+    // MODULE 4 - DATA VISUALIZATION & STORYTELLING
+    // =====================================================
+    {
+      name: "Module 4 - Data Visualization and Storytelling",
+      topics: [
+        "Bar Charts",
+        "Histograms",
+        "Pie Charts",
+        "Basic Visualization Tools",
+        "Scatter Plots",
+        "Line Plots",
+        "Regression Visualization",
+        "Box Plots",
+        "Pair Plot",
+        "Word Clouds",
+        "Radar Charts",
+        "Specialized Visualization Tools",
+        "Waffle Charts",
+      ],
+    },
+
+    // =====================================================
+    // MODULE 5 - SQL
+    // =====================================================
+    {
+      name: "Module 5 - SQL",
+      topics: [
+        // Database Fundamentals
+        "Introduction to Databases",
+        "Creating a Database Instance on Cloud",
+        "Provisioning a Cloud Hosted Database Instance",
+        "Getting Started with SQL",
+        "Creating Data with SQL",
+        "Selecting Data with SQL",
+        "Retrieving Data with SQL",
+        "What is SQL?",
+        "Thinking About Your Data",
+        "Relational Models",
+        "Transactional Models",
+        "ER Diagram",
+
+        // DDL / DML / DQL
+        "CREATE TABLE Statement",
+        "DROP TABLE Statement",
+        "UPDATE Statements",
+        "DELETE Statements",
+        "SELECT Statement",
+        "Creating Temporary Tables",
+        "Adding Comments to SQL",
+
+        // Subqueries
+        "Using Subqueries",
+        "Subquery Best Practices",
+        "Subquery Considerations",
+
+        // Joins
+        "Joining Tables",
+        "Subqueries and Joins",
+        "Cartesian Cross Joins",
+        "Inner Joins",
+        "Aliases",
+        "Self Joins",
+        "Left Joins",
+        "Right Joins",
+        "Full Outer Joins",
+        "Unions",
+
+        // Filtering
+        "Basics of Filtering with SQL",
+        "Advanced Filtering",
+        "IN Operator",
+        "OR Operator",
+        "NOT Operator",
+        "Filtering Data",
+        "Sorting Data",
+        "Calculating Data with SQL",
+        "Wildcards",
+        "ORDER BY",
+        "Math Operations",
+        "Aggregate Functions",
+        "Grouping Data",
+        "Text Strings",
+        "Date and Time Strings",
+        "Modifying Data",
+        "Analyzing Data with SQL",
+        "Date and Time Examples",
+        "CASE Statements",
+        "Views",
+
+        // Python Database Connectivity
+        "Accessing Databases using Python",
+        "DB-API",
+        "Writing Code using DB-API",
+        "Connecting to a Database",
+        "Creating Database Credentials",
+        "Connecting to a Database Instance",
+        "Creating Tables",
+        "Loading Data",
+        "Inserting Data",
+        "Querying Data",
+        "Analysing Data with Python",
+      ],
+    },
+
+    // =====================================================
+    // MODULE 6 - EXCEL
+    // =====================================================
+    {
+      name: "Module 6 - Excel for Data Analytics",
+      topics: [
+        "Input Data and Handling Large Spreadsheets",
+        "Excel Productivity Tricks",
+        "Automating Data Analysis",
+        "VLOOKUP",
+        "IF Function",
+        "ROUND Function",
+        "Analyzing Data using Excel",
+        "Visualizing Data using Excel",
+        "Transforming Messy Data",
+        "Cleaning Data",
+        "Processing Large Data",
+        "Organizing Data",
+        "Spreadsheet Design Principles",
+        "Drop-Down Lists",
+        "Data Validation",
+        "Creating Charts",
+        "Interactive Reports",
+        "Excel Pivot Tables",
+        "Pivot Charts",
+        "Slicers",
+        "Timelines",
+        "COUNTIFS",
+        "COUNT",
+        "SUMIFS",
+        "AVERAGE",
+        "Sort",
+        "Filter",
+        "Search and Replace",
+        "Go To Special",
+        "Power Query",
+        "Importing Data",
+        "Transforming Data",
+        "Customizing Microsoft Excel Interface",
+        "Professional Report Formatting",
+        "Commenting on Cells",
+        "AutoFill",
+        "Flash Fill",
+        "Excel Formulas",
+        "Workbook References",
+        "Worksheet References",
+        "Printing Options",
+        "Pareto Chart",
+        "Histogram",
+        "Treemap",
+        "Sunburst Chart",
+      ],
+    },
+
+    // =====================================================
+    // MODULE 7 - TABLEAU
+    // =====================================================
+    {
+      name: "Module 7 - Tableau",
+      topics: [
+        "Introduction to Data Visualization",
+        "Tableau Introduction",
+        "Tableau Architecture",
+        "Exploring Data using Tableau",
+        "Working with Data using Tableau",
+        "Data Extraction",
+        "Data Blending",
+        "Basic Charts",
+        "Advanced Charts",
+
+        // Sorting
+        "Quick Sort",
+        "Sort from Axis",
+        "Sorting Legends",
+        "Sorting Axis",
+        "Sort by Fields",
+
+        // Filtering
+        "Dimension Filters",
+        "Measure Filters",
+        "Date Filters",
+        "Tableau Context Filters",
+
+        // Advanced Tableau
+        "Reference Lines",
+        "Reference Bands",
+        "Distribution",
+        "Parameters",
+        "Dynamic Parameters",
+        "Actions",
+        "Forecasting",
+        "Exponential Smoothing Techniques",
+        "Clustering",
+        "Calculated Fields",
+        "Quick Tables",
+        "Tableau Mapping Features",
+        "Tableau Dashboards",
+        "Dashboard Actions",
+        "Tableau Stories",
+        "Groups",
+        "Sets",
+        "Combined Sets",
+        "Analyzing Data using Tableau",
+        "Visualizing Data using Tableau",
+      ],
+    },
+
+    // =====================================================
+    // MODULE 8 - POWER BI
+    // =====================================================
+    {
+      name: "Module 8 - Power BI",
+      topics: [
+        // Introduction
+        "Introduction to Power BI",
+        "Need for Power BI",
+        "Importance of Power BI",
+        "Advantages of Power BI",
+        "Scalable Options",
+        "Power BI Data Source Library",
+        "Data Warehouse Files",
+        "Business Analyst Tools",
+        "Microsoft Cloud Tools",
+        "Power BI Installation",
+        "Power BI Desktop",
+        "Sample Reports",
+        "Visualization Controls",
+
+        // Desktop & Mobile
+        "Understanding Desktop Edition",
+        "Understanding Mobile Edition",
+        "Report Rendering Options",
+        "End User Access",
+
+        // Report Design
+        "Report Design with Database Tables",
+        "Report Visuals",
+        "Fields",
+        "UI Options",
+        "Multiple Page Reports",
+        "Multiple Visualizations",
+        "Data Access",
+        "GET DATA Options",
+        "Report Fields",
+        "Filters",
+        "Report View Options",
+        "Full View",
+        "Fit Page",
+        "Width Scale",
+        "Report Design using Databases",
+        "Report Design using Queries",
+        "Creating Power BI Reports",
+        "Auto Filters",
+      ],
+    },
+
+    // =====================================================
+    // MODULE 9 - GENERATIVE AI FUNDAMENTALS
+    // =====================================================
+    {
+      name: "Module 9 - Generative AI Fundamentals",
+      topics: [
+        "Introduction to Artificial Intelligence",
+        "AI Fundamentals",
+        "Machine Learning Overview",
+        "Deep Learning Overview",
+        "Introduction to Generative AI",
+        "Generative AI Applications",
+        "Generative AI for Data Analysts",
+        "How Generative AI Works",
+        "Large Language Models",
+        "AI Models",
+        "Tokens",
+        "Context Window",
+        "Temperature",
+        "AI Hallucinations",
+        "AI Limitations",
+        "AI Ethics",
+        "Responsible AI",
+      ],
+    },
+
+    // =====================================================
+    // MODULE 10 - GENERATIVE AI TOOLS
+    // =====================================================
+    {
+      name: "Module 10 - Generative AI Tools",
+      topics: [
+        "ChatGPT",
+        "Google Gemini",
+        "Claude",
+        "Perplexity",
+        "AI Tools for Data Analysts",
+        "AI Coding Assistants",
+        "Cursor AI",
+        "AI for Data Analysis",
+        "AI for Excel",
+        "AI for SQL",
+        "AI for Python",
+        "AI for Power BI",
+        "AI for DAX",
+        "AI Dashboard Assistance",
+        "AI Report Generation",
+      ],
+    },
+
+    // =====================================================
+    // MODULE 11 - PROMPT ENGINEERING
+    // =====================================================
+    {
+      name: "Module 11 - Prompt Engineering",
+      topics: [
+        "Introduction to Prompt Engineering",
+        "What is a Prompt?",
+        "Prompt Structure",
+        "Anatomy of an Effective Prompt",
+        "Prompt Engineering Techniques",
+        "Prompt Best Practices",
+        "Role-Based Prompting",
+        "Context-Based Prompting",
+        "Structured Output Prompting",
+        "Few-Shot Prompting",
+        "Zero-Shot Prompting",
+        "Prompt Optimization",
+        "Prompt Debugging",
+        "Business Prompt Engineering",
+        "Data Analysis Prompts",
+        "SQL Prompts",
+        "Excel Prompts",
+        "Power BI Prompts",
+        "Python Prompts",
+      ],
+    },
+
+    // =====================================================
+    // MODULE 12 - GIT & GITHUB
+    // =====================================================
+    {
+      name: "Module 12 - Git & GitHub",
+      topics: [
+        "Introduction to Git",
+        "Version Control",
+        "Git Installation",
+        "Git Configuration",
+        "Git Repository",
+        "git init",
+        "git clone",
+        "git add",
+        "git commit",
+        "git status",
+        "git push",
+        "git pull",
+        "git fetch",
+        "Branches",
+        "Merge",
+        "Conflict Resolution",
+        "GitHub Repository",
+        "Remote Repository",
+        "Pull Requests",
+        "GitHub Collaboration",
+        "README Creation",
+        "Portfolio Building",
+      ],
+    },
+
+    // =====================================================
+    // MODULE 13 - REAL-TIME PROJECTS
+    // =====================================================
+    {
+      name: "Module 13 - Real-Time Data Analytics Projects",
+      topics: [
+        "Project Requirement Analysis",
+        "Data Collection",
+        "Data Understanding",
+        "Data Cleaning",
+        "Data Transformation",
+        "Exploratory Data Analysis",
+        "Statistical Analysis",
+        "Data Visualization",
+        "Business Insights",
+        "Sales Data Analysis",
+        "Customer Data Analysis",
+        "Financial Data Analysis",
+        "Python Data Analysis Project",
+        "SQL Data Analysis Project",
+        "Excel Dashboard Project",
+        "Tableau Dashboard Project",
+        "Power BI Dashboard Project",
+        "Generative AI Data Analysis Project",
+        "End-to-End Data Analytics Project",
+        "GitHub Portfolio Project",
+        "Project Documentation",
+        "Project Presentation",
+      ],
+    },
+
+    // =====================================================
+    // MODULE 14 - CAREER & INTERVIEW PREPARATION
+    // =====================================================
+    {
+      name: "Module 14 - Career & Interview Preparation",
+      topics: [
+        "Data Analyst Interview Preparation",
+        "Python Interview Questions",
+        "SQL Interview Questions",
+        "Excel Interview Questions",
+        "Statistics Interview Questions",
+        "Machine Learning Interview Questions",
+        "Tableau Interview Questions",
+        "Power BI Interview Questions",
+        "DAX Interview Questions",
+        "Generative AI Interview Questions",
+        "Technical Interview Preparation",
+        "HR Interview Preparation",
+        "Resume Preparation",
+        "Resume Optimization",
+        "GitHub Portfolio Preparation",
+        "Mock Interviews",
+        "Communication Skills",
+        "Project Explanation",
+        "Placement Preparation",
+      ],
+    },
+  ],
+},
   {
-    title: "Data Analyst with Generative AI",
-    image: dataAnalytics,
-    category: "Data & Analytics",
-    level: "Beginner",
-    duration: "4 - 5 Months",
-    mode: "Online Live",
-    badge: "Popular",
-    description:
-      "Become a job-ready Data Analyst with Advanced Excel, MySQL, Power BI, Python, Generative AI and GitHub skills.",
-    topics: [
-      "Advanced Excel",
-      "MySQL",
-      "Power BI",
-      "Python",
-      "Pandas",
-      "NumPy",
-      "Matplotlib",
-      "Seaborn",
-      "Data Cleaning",
-      "Data Visualization",
-      "Power Query",
-      "Power Pivot",
-      "DAX",
-      "Dashboard Creation",
-      "Generative AI",
-      "Prompt Engineering",
-      "ChatGPT",
-      "Gemini",
-      "Claude",
-      "Perplexity",
-      "Git",
-      "GitHub",
-      "Real-Time Projects",
-      "Resume Preparation",
-      "Mock Interviews",
-    ],
-    modules: [
-      {
-        name: "Excel - Introduction",
-        topics: [
-          "MS Office Versions",
-          "Latest Excel Interface",
-          "Rows and Columns",
-          "Keyboard Shortcuts",
-          "Data Entry",
-          "Fill Series",
-          "Find and Select",
-          "Clear Options",
-          "Ctrl + Enter",
-          "Font Formatting",
-          "Alignment",
-          "Clipboard",
-          "Copy and Paste Special",
-        ],
-      },
-      {
-        name: "Excel - Referencing & Arithmetic Functions",
-        topics: [
-          "Cell Referencing",
-          "Absolute Referencing",
-          "Relative Referencing",
-          "Mixed Referencing",
-          "Named Ranges",
-          "Functions with Named Ranges",
-          "SUM",
-          "SUMIF",
-          "SUMIFS",
-          "COUNT",
-          "COUNTA",
-          "COUNTIFS",
-          "AVERAGE",
-          "AVERAGEIFS",
-          "MAX",
-          "MAXIFS",
-          "MIN",
-          "MINIFS",
-        ],
-      },
-      {
-        name: "Excel - Logical & Lookup Functions",
-        topics: [
-          "IF",
-          "AND",
-          "OR",
-          "Nested IF",
-          "IFS",
-          "NOT",
-          "IFERROR",
-          "Nested Mathematical Functions",
-          "Nested Logical Functions",
-          "LOOKUP",
-          "VLOOKUP",
-          "Nested VLOOKUP",
-          "HLOOKUP",
-          "INDEX",
-          "INDEX + MATCH",
-          "INDIRECT",
-          "OFFSET",
-        ],
-      },
-      {
-        name: "Excel - Advanced Functions",
-        topics: [
-          "Combining Arithmetic Functions",
-          "Combining Logical Functions",
-          "Combining Lookup Functions",
-          "Nested Functions",
-          "Data Validation",
-          "Dependent Drop-down Lists",
-        ],
-      },
-      {
-        name: "Excel - Date & Text Functions",
-        topics: [
-          "DATE",
-          "DAY",
-          "MONTH",
-          "YEAR",
-          "YEARFRAC",
-          "DATEDIF",
-          "EOMONTH",
-          "TEXT",
-          "UPPER",
-          "LOWER",
-          "PROPER",
-          "LEFT",
-          "RIGHT",
-          "SEARCH",
-          "FIND",
-          "MID",
-          "TRIM",
-          "Flash Fill",
-        ],
-      },
-      {
-        name: "Excel - Data Cleaning & Handling",
-        topics: [
-          "Data Cleaning",
-          "Data Type Identification",
-          "Number Formatting",
-          "Formatting Shortcuts",
-          "CTRL + T",
-          "Excel Tables",
-          "Table Formatting",
-          "Remove Duplicates",
-          "SORT",
-          "Advanced Sort",
-          "FILTER",
-          "Advanced Filter",
-        ],
-      },
-      {
-        name: "Excel - Data Visualization",
-        topics: [
-          "Conditional Formatting",
-          "Icon Sets",
-          "Highlighted Colour Sets",
-          "Data Bars",
-          "Custom Formatting",
-          "Bar Chart",
-          "Column Chart",
-          "Line Chart",
-          "Scatter Chart",
-          "Combo Chart",
-          "Gantt Chart",
-          "Waterfall Chart",
-          "Pie Chart",
-        ],
-      },
-      {
-        name: "Excel - Pivot Tables & Dashboards",
-        topics: [
-          "Pivot Reports",
-          "Pivot Table Interface",
-          "Cross Table Reports",
-          "Pivot Filters",
-          "Pivot Charts",
-          "Slicers",
-          "Connecting Slicers",
-          "Multiple Reports",
-          "Calculated Fields",
-          "Calculated Items",
-          "Dashboard Types",
-          "Dashboard Design",
-          "Charts and Tables",
-          "Colours and Shapes",
-          "Dashboard Best Practices",
-        ],
-      },
-      {
-        name: "Excel - Power Query & Power Pivot",
-        topics: [
-          "Power Query Interface",
-          "Power Query Tabs",
-          "Import Excel Files",
-          "Import Text Files",
-          "Import External Sources",
-          "Data Cleaning",
-          "Data Transformation",
-          "Load Queries",
-          "Merge Queries",
-          "Append Queries",
-          "Power Pivot",
-          "Pivot vs Power Pivot",
-          "Database Connections",
-          "Workbook Connections",
-          "Web Data Connections",
-        ],
-      },
-      {
-        name: "MySQL - Database Fundamentals",
-        topics: [
-          "Introduction to Databases",
-          "RDBMS",
-          "Database Concepts",
-          "Normalization",
-          "Types of RDBMS",
-          "MySQL Installation",
-          "MySQL Workbench",
-        ],
-      },
-      {
-        name: "MySQL - SQL Commands & Data Types",
-        topics: [
-          "DDL",
-          "DML",
-          "DQL",
-          "DCL",
-          "TCL",
-          "Numeric Data Types",
-          "Character Data Types",
-          "Date and Time Data Types",
-        ],
-      },
-      {
-        name: "MySQL - DQL & Operators",
-        topics: [
-          "SELECT",
-          "LIMIT",
-          "DISTINCT",
-          "WHERE",
-          "AND",
-          "OR",
-          "IN",
-          "NOT IN",
-          "BETWEEN",
-          "EXISTS",
-          "IS NULL",
-          "IS NOT NULL",
-          "Wildcards",
-          "ORDER BY",
-        ],
-      },
-      {
-        name: "MySQL - CASE, NULL & Aggregations",
-        topics: [
-          "CASE WHEN THEN",
-          "Logical SQL Problems",
-          "NULL Handling",
-          "IFNULL",
-          "COALESCE",
-          "GROUP BY",
-          "HAVING",
-          "COUNT",
-          "SUM",
-          "AVG",
-          "MIN",
-          "MAX",
-          "String Functions",
-          "Date & Time Functions",
-        ],
-      },
-      {
-        name: "MySQL - Constraints & Joins",
-        topics: [
-          "NOT NULL",
-          "UNIQUE",
-          "CHECK",
-          "DEFAULT",
-          "Primary Key",
-          "Foreign Key",
-          "Column Level Constraints",
-          "Table Level Constraints",
-          "INNER JOIN",
-          "LEFT JOIN",
-          "RIGHT JOIN",
-          "CROSS JOIN",
-          "SELF JOIN",
-          "FULL OUTER JOIN Concepts",
-        ],
-      },
-      {
-        name: "MySQL - DDL, DML & TCL",
-        topics: [
-          "CREATE",
-          "DROP",
-          "ALTER",
-          "RENAME",
-          "TRUNCATE",
-          "MODIFY",
-          "COMMENT",
-          "INSERT",
-          "UPDATE",
-          "DELETE",
-          "COMMIT",
-          "ROLLBACK",
-          "SAVEPOINT",
-          "Data Partitioning Concepts",
-        ],
-      },
-      {
-        name: "MySQL - Advanced SQL",
-        topics: [
-          "Indexes",
-          "Types of Indexes",
-          "Views",
-          "Stored Procedures",
-          "IN Parameters",
-          "OUT Parameters",
-          "INOUT Parameters",
-          "User Defined Functions",
-          "Window Functions",
-          "RANK",
-          "DENSE_RANK",
-          "ROW_NUMBER",
-          "LEAD",
-          "LAG",
-          "UNION",
-          "UNION ALL",
-          "INTERSECT",
-          "Subqueries",
-          "Multiple Queries",
-          "Triggers",
-        ],
-      },
-      {
-        name: "Power BI - Fundamentals",
-        topics: [
-          "Power BI Introduction",
-          "Power BI Installation",
-          "Installation Checklist",
-          "Power BI Desktop",
-          "Power Query",
-          "Desktop vs Power Query",
-          "Power BI Interface",
-          "Data Sources",
-          "Visualization Types",
-          "Loading Multiple Sources",
-          "Data Types",
-          "Default Visualizations",
-          "Geo Location Maps",
-        ],
-      },
-      {
-        name: "Power BI - Dashboard & AI Visuals",
-        topics: [
-          "Financial Sample Data",
-          "Sample Dashboard",
-          "Map Visuals",
-          "Map Variations",
-          "Scatter Plot",
-          "Play Axis",
-          "AI Visuals",
-          "AI Analysis",
-          "Q&A Chatbot",
-          "Hierarchy Tree",
-        ],
-      },
-      {
-        name: "Power BI - Visualization",
-        topics: [
-          "Column Chart",
-          "Line Chart",
-          "Conditional Formatting",
-          "Visual Formatting",
-          "Data Labels",
-          "Axes Formatting",
-          "Chart Customization",
-        ],
-      },
-      {
-        name: "Power Query Editor",
-        topics: [
-          "Power Query Editor",
-          "Load Data from Folder",
-          "Promote Headers",
-          "Split Columns",
-          "Delimiter",
-          "Add Columns",
-          "Append Queries",
-          "Merge Queries",
-          "Data Cleaning",
-          "Data Transformation",
-        ],
-      },
-      {
-        name: "Power BI - Data Modelling",
-        topics: [
-          "Data Modelling",
-          "Relationships",
-          "Relationship Types",
-          "Cardinality",
-          "Filter Direction",
-          "Multiple Data Sources",
-          "Dashboard from Related Data",
-          "Many-to-Many Relationships",
-          "Active Relationships",
-          "Inactive Relationships",
-        ],
-      },
-      {
-        name: "Power BI - Advanced Features",
-        topics: [
-          "Custom Column",
-          "Conditional Column",
-          "Manage Parameters",
-          "Filters",
-          "Filter Types",
-          "Trend Analysis",
-          "Future Forecast",
-          "Tooltips",
-          "Drill Down",
-          "Drill Through",
-          "Visual Interactions",
-          "Buttons",
-          "Bookmarks",
-          "Navigation Buttons",
-        ],
-      },
-      {
-        name: "Power BI - DAX Fundamentals",
-        topics: [
-          "Introduction to DAX",
-          "Calculated Columns",
-          "DAX Measures",
-          "Calculated Tables",
-          "Calendar",
-          "CALENDARAUTO",
-          "SUMMARIZE",
-          "GROUPBY",
-          "RELATED",
-          "LOOKUPVALUE",
-          "SWITCH",
-          "DATEDIFF",
-          "RANKX",
-          "Date Functions",
-        ],
-      },
-      {
-        name: "Power BI - DAX Aggregate Functions",
-        topics: [
-          "AVERAGE",
-          "AVERAGEA",
-          "AVERAGEX",
-          "COUNT",
-          "COUNTBLANK",
-          "COUNTROWS",
-          "COUNTX",
-          "DISTINCTCOUNT",
-          "DISTINCTCOUNTNOBLANK",
-          "MAX",
-          "MAXX",
-          "SUM",
-          "SUMX",
-        ],
-      },
-      {
-        name: "Power BI - DAX Date & Time",
-        topics: [
-          "CALENDAR",
-          "HOUR",
-          "MINUTE",
-          "DATEDIFF",
-          "NETWORKDAYS",
-          "DAY",
-          "QUARTER",
-          "MONTH",
-          "SECOND",
-          "YEAR",
-          "TIME",
-          "NOW",
-          "WEEKDAY",
-          "TODAY",
-          "WEEKNUM",
-          "EOMONTH",
-        ],
-      },
-      {
-        name: "Power BI - DAX Text & Logical Functions",
-        topics: [
-          "COMBINEVALUES",
-          "CONCATENATE",
-          "CONCATENATEX",
-          "EXACT",
-          "SEARCH",
-          "FIND",
-          "FIXED",
-          "LEFT",
-          "RIGHT",
-          "LEN",
-          "UPPER",
-          "MID",
-          "REPLACE",
-          "SUBSTITUTE",
-          "REPT",
-          "TRIM",
-          "VALUE",
-          "FORMAT",
-          "IF",
-          "AND",
-          "OR",
-          "NOT",
-          "SWITCH",
-          "COALESCE",
-          "TRUE",
-        ],
-      },
-      {
-        name: "Power BI - DAX Filter & Information Functions",
-        topics: [
-          "CONTAINS",
-          "CONTAINSROW",
-          "HASONEFILTER",
-          "HASONEVALUE",
-          "ISFILTERED",
-          "ISBLANK",
-          "ISEMPTY",
-          "ISEVEN",
-          "USERNAME",
-          "USERPRINCIPALNAME",
-          "CALCULATE",
-          "ALL",
-          "ALLCROSSFILTERED",
-          "ALLEXCEPT",
-          "ALLSELECTED",
-          "FILTER",
-          "FIRST",
-          "LAST",
-          "LOOKUPVALUE",
-          "SELECTEDVALUE",
-        ],
-      },
-      {
-        name: "Power BI - Time Intelligence",
-        topics: [
-          "OPENINGBALANCEMONTH",
-          "OPENINGBALANCEQUARTER",
-          "OPENINGBALANCEYEAR",
-          "CLOSINGBALANCEMONTH",
-          "CLOSINGBALANCEYEAR",
-          "DATEADD",
-          "DATESBETWEEN",
-          "DATEINPERIOD",
-          "DATESMTD",
-          "DATESQTD",
-          "DATESYTD",
-          "ENDOFMONTH",
-          "ENDOFYEAR",
-          "FIRSTDATE",
-          "FIRSTNONBLANK",
-          "LASTDATE",
-          "LASTNONBLANK",
-          "NEXTDAY",
-          "NEXTQUARTER",
-          "NEXTYEAR",
-          "YoY Analysis",
-          "Running Total",
-          "Rolling Average",
-        ],
-      },
-      {
-        name: "Power BI - Modelling & Service",
-        topics: [
-          "Model Relationships",
-          "Edit Relationships",
-          "Cardinality",
-          "Cross Filter Direction",
-          "Active Relationships",
-          "Inactive Relationships",
-          "USERELATIONSHIP",
-          "Hiding Columns",
-          "Refresh Data",
-          "Remove Multiple Columns",
-          "Avoiding Many-to-Many",
-          "Home Tab Options",
-          "New Visuals",
-          "Text Box",
-          "Linked Reports",
-          "More Visuals",
-          "Publish",
-          "Power BI Service",
-          "app.powerbi.com",
-          "Schedule Refresh",
-          "Dataflows",
-          "PowerPoint Integration",
-        ],
-      },
-      {
-        name: "Power BI - Custom Visuals",
-        topics: [
-          "Custom Visuals",
-          "Loading Custom Visuals",
-          "Pinning Visuals",
-          "Power BI Templates",
-          "Publishing Reports",
-        ],
-      },
-      {
-        name: "Python for Data Analysis - Fundamentals",
-        topics: [
-          "Anaconda Installation",
-          "Python Introduction",
-          "Variables",
-          "Integer",
-          "Boolean",
-          "Float",
-          "List",
-          "Tuple",
-          "String",
-          "Operators",
-        ],
-      },
-      {
-        name: "Python - Data Types & Collections",
-        topics: [
-          "Dictionaries",
-          "Sequence Methods",
-          "Concatenation",
-          "Repetition",
-          "len()",
-          "min()",
-          "max()",
-          "Indexing",
-          "Position",
-          "Adding Elements",
-          "Deleting Elements",
-          "Reverse",
-          "Sorting",
-        ],
-      },
-      {
-        name: "Python - Sets, Regex & Decisions",
-        topics: [
-          "Sets",
-          "Set Theory",
-          "Regular Expressions",
-          "re Module",
-          "findall",
-          "search",
-          "split",
-          "match",
-          "if",
-          "elif",
-          "User Input",
-          "Identity Operators",
-        ],
-      },
-      {
-        name: "Python - Loops & Functions",
-        topics: [
-          "for Loop",
-          "while Loop",
-          "Functions",
-          "Function Arguments",
-          "Return Values",
-          "Lambda Functions",
-          "Modules",
-          "Math Module",
-          "Calendar Module",
-          "Date & Time Module",
-        ],
-      },
-      {
-        name: "Python - Pandas, NumPy & Visualization",
-        topics: [
-          "NumPy Introduction",
-          "Pandas Introduction",
-          "DataFrame Creation",
-          "Reading Data",
-          "Data Cleaning",
-          "Data Transformation",
-          "Pandas Analysis",
-          "University Dataset Analysis",
-          "Salary Dataset Analysis",
-          "Matplotlib",
-          "Seaborn",
-          "Data Visualization",
-        ],
-      },
-      {
-        name: "Generative AI - Fundamentals",
-        topics: [
-          "Introduction to AI",
-          "AI Revolution",
-          "Artificial Intelligence Fundamentals",
-          "Machine Learning",
-          "Deep Learning",
-          "Generative AI",
-          "ML vs DL vs GenAI",
-          "History of AI",
-          "AI Applications",
-          "AI Career Opportunities",
-          "What is Generative AI?",
-          "How Generative AI Works",
-          "Tokens",
-          "Context Window",
-          "Temperature",
-          "Hallucinations",
-          "AI Ethics",
-          "Responsible AI",
-          "AI Limitations",
-        ],
-      },
-      {
-        name: "Generative AI - LLMs",
-        topics: [
-          "Large Language Models",
-          "What are LLMs?",
-          "How LLMs are Trained",
-          "Transformer Architecture",
-          "High-Level Transformer Concepts",
-          "Choosing the Right Model",
-        ],
-      },
-      {
-        name: "AI Tools for Data Analysts",
-        topics: [
-          "ChatGPT",
-          "Google Gemini",
-          "Claude",
-          "Perplexity",
-          "AI Tools Ecosystem",
-          "AI Coding Assistants",
-          "Cursor AI",
-        ],
-      },
-      {
-        name: "Prompt Engineering",
-        topics: [
-          "Introduction to Prompt Engineering",
-          "Anatomy of an Effective Prompt",
-          "Prompt Best Practices",
-          "Structured Output Prompting",
-          "Prompt Optimization",
-          "Prompt Debugging",
-          "Prompt Libraries",
-          "Business Prompt Engineering",
-        ],
-      },
-      {
-        name: "Practical AI for Data Analysts",
-        topics: [
-          "AI for Excel Automation",
-          "AI for SQL Query Writing",
-          "AI for Python Coding",
-          "AI for Power BI",
-          "AI for DAX",
-          "AI Dashboard Design",
-          "AI Report Generation",
-          "AI Resume Builder",
-          "AI Mock Interviews",
-          "AI Productivity Techniques",
-        ],
-      },
-      {
-        name: "Git & GitHub for Data Analysts",
-        topics: [
-          "Introduction to Git",
-          "Version Control",
-          "Installing Git",
-          "GitHub Setup",
-          "Git Commands",
-          "Repository Management",
-          "Creating Repositories",
-          "Cloning Repositories",
-          "GitHub Interface",
-          "Branching",
-          "Merging",
-          "Commit",
-          "Push",
-          "Pull",
-          "Uploading Excel Projects",
-          "Uploading SQL Projects",
-          "Uploading Python Projects",
-          "GitHub Collaboration",
-          "README Creation",
-          "Portfolio Building",
-          "Version Tracking",
-        ],
-      },
-      {
-        name: "Real-Time Data Analytics Projects",
-        topics: [
-          "Sales Data Analysis",
-          "Customer Analysis",
-          "Financial Analysis",
-          "Excel Dashboard Project",
-          "MySQL Analytics Project",
-          "Power BI Business Dashboard",
-          "Python Data Analysis Project",
-          "Generative AI Data Analysis",
-          "End-to-End Data Analytics Project",
-          "GitHub Portfolio Project",
-        ],
-      },
-      {
-        name: "Interview & Career Preparation",
-        topics: [
-          "Data Analyst Interview Questions",
-          "Excel Interview Questions",
-          "SQL Interview Questions",
-          "Power BI Interview Questions",
-          "Python Interview Questions",
-          "DAX Interview Questions",
-          "Generative AI Interview Questions",
-          "Resume Preparation",
-          "Resume Optimization",
-          "Mock Interviews",
-          "Technical Interviews",
-          "HR Interviews",
-          "Aptitude",
-          "Communication Skills",
-          "Placement Preparation",
-        ],
-      },
-    ],
-  },
-  {
-    title: "Generative AI",
-    image: genaiLogo,
-    category: "AI & Emerging Tech",
-    level: "Advanced",
-    duration: "3 - 5 Months",
-    mode: "Online Live",
-    badge: "New",
-    description:
-      "Explore Generative AI, LLMs, prompt engineering, RAG and AI agents.",
-    topics: [
-      "AI Fundamentals",
-      "Machine Learning Basics",
-      "Generative AI",
-      "Prompt Engineering",
-      "LLMs",
-      "ChatGPT",
-      "GPT Models",
-      "Embeddings",
-      "Vector Databases",
-      "LangChain",
-      "RAG",
-      "AI Agents",
-      "API Integration",
-      "AI Projects",
-    ],
-    modules: [
-      {
-        name: "AI Fundamentals",
-        topics: [
-          "Artificial Intelligence",
-          "Machine Learning",
-          "Deep Learning",
-          "Neural Networks",
-          "AI Applications",
-        ],
-      },
-      {
-        name: "Generative AI",
-        topics: [
-          "Generative Models",
-          "LLMs",
-          "Transformers",
-          "GPT Models",
-          "Text Generation",
-          "AI Applications",
-        ],
-      },
-      {
-        name: "Prompt Engineering",
-        topics: [
-          "Prompt Basics",
-          "Zero-Shot Prompting",
-          "Few-Shot Prompting",
-          "Role Prompting",
-          "Structured Prompts",
-          "Prompt Optimization",
-        ],
-      },
-      {
-        name: "LangChain & RAG",
-        topics: [
-          "LangChain",
-          "Embeddings",
-          "Vector Database",
-          "Document Loading",
-          "Retrieval",
-          "RAG Applications",
-        ],
-      },
-      {
-        name: "AI Agents",
-        topics: [
-          "AI Agents",
-          "Tools",
-          "Memory",
-          "Agent Workflows",
-          "Automation",
-          "Agent Applications",
-        ],
-      },
-      {
-        name: "AI Projects",
-        topics: [
-          "AI Chatbot",
-          "Document Assistant",
-          "RAG Application",
-          "AI Agent",
-          "API Integration",
-          "Final AI Project",
-        ],
-      },
-    ],
-  },
+  title: "Artificial Intelligence & Generative AI",
+  image: genaiLogo,
+  category: "Artificial Intelligence",
+  level: "Beginner to Advanced",
+  duration: "5 - 6 Months",
+  mode: "Online Live",
+  badge: "Trending",
+
+  description:
+    "Master Artificial Intelligence and Generative AI from fundamentals to advanced industry applications, including Python, Machine Learning, Deep Learning, NLP, LLMs, Prompt Engineering, RAG, AI Agents, Fine-Tuning, APIs, deployment and real-time AI projects.",
+
+  topics: [
+    "Artificial Intelligence",
+    "Machine Learning",
+    "Deep Learning",
+    "Python for AI",
+    "Statistics",
+    "Probability",
+    "NumPy",
+    "Pandas",
+    "Matplotlib",
+    "Seaborn",
+    "Scikit-Learn",
+    "TensorFlow",
+    "Keras",
+    "PyTorch",
+    "Natural Language Processing",
+    "Computer Vision",
+    "Generative AI",
+    "Large Language Models",
+    "Prompt Engineering",
+    "ChatGPT",
+    "Google Gemini",
+    "Claude",
+    "Perplexity",
+    "OpenAI API",
+    "Gemini API",
+    "Hugging Face",
+    "Transformers",
+    "Embeddings",
+    "Vector Databases",
+    "RAG",
+    "LangChain",
+    "LangGraph",
+    "AI Agents",
+    "Fine-Tuning",
+    "LoRA",
+    "QLoRA",
+    "Multimodal AI",
+    "AI Automation",
+    "Git",
+    "GitHub",
+    "Docker",
+    "Cloud Deployment",
+    "Real-Time AI Projects",
+    "Resume Preparation",
+    "Mock Interviews",
+  ],
+
+  modules: [
+
+    // =====================================================
+    // MODULE 1 - ARTIFICIAL INTELLIGENCE FUNDAMENTALS
+    // =====================================================
+    {
+      name: "Module 1 - Artificial Intelligence Fundamentals",
+      topics: [
+        "Introduction to Artificial Intelligence",
+        "What is AI?",
+        "History of Artificial Intelligence",
+        "Evolution of AI",
+        "AI Generations",
+        "AI vs Machine Learning",
+        "AI vs Deep Learning",
+        "AI vs Generative AI",
+        "Types of Artificial Intelligence",
+        "Narrow AI",
+        "General AI",
+        "Super AI",
+        "Reactive Machines",
+        "Limited Memory AI",
+        "Theory of Mind",
+        "Self-Aware AI",
+        "AI Applications",
+        "AI in Healthcare",
+        "AI in Finance",
+        "AI in Education",
+        "AI in Retail",
+        "AI in Manufacturing",
+        "AI in E-Commerce",
+        "AI in Cybersecurity",
+        "AI in Software Development",
+        "AI Career Opportunities",
+        "AI Project Life Cycle",
+        "AI Ethics",
+        "Responsible AI",
+        "AI Limitations",
+        "AI Risks",
+      ],
+    },
+
+    // =====================================================
+    // MODULE 2 - PYTHON FOR AI
+    // =====================================================
+    {
+      name: "Module 2 - Python Programming for AI",
+      topics: [
+        "Introduction to Python",
+        "Python Installation",
+        "Python Environment Setup",
+        "Variables",
+        "Data Types",
+        "Operators",
+        "Input and Output",
+        "Conditional Statements",
+        "Loops",
+        "Functions",
+        "Function Arguments",
+        "Return Values",
+        "Lambda Functions",
+        "List Comprehension",
+        "Dictionary Comprehension",
+        "Modules",
+        "Packages",
+        "Exception Handling",
+        "File Handling",
+        "JSON Handling",
+        "Object-Oriented Programming",
+        "Classes",
+        "Objects",
+        "Inheritance",
+        "Polymorphism",
+        "Encapsulation",
+        "Abstraction",
+        "Decorators",
+        "Generators",
+        "Iterators",
+        "Virtual Environment",
+        "pip",
+        "Jupyter Notebook",
+        "Google Colab",
+      ],
+    },
+
+    // =====================================================
+    // MODULE 3 - PYTHON LIBRARIES FOR AI
+    // =====================================================
+    {
+      name: "Module 3 - Python Libraries for AI",
+      topics: [
+        "NumPy Introduction",
+        "NumPy Arrays",
+        "Array Operations",
+        "Indexing",
+        "Slicing",
+        "Reshaping",
+        "Broadcasting",
+        "Mathematical Operations",
+        "Statistical Operations",
+        "Pandas Introduction",
+        "Series",
+        "DataFrames",
+        "Reading CSV Files",
+        "Reading Excel Files",
+        "Reading JSON Files",
+        "Data Selection",
+        "Data Filtering",
+        "Data Sorting",
+        "Missing Values",
+        "Duplicate Values",
+        "Data Cleaning",
+        "Data Transformation",
+        "GroupBy",
+        "Merge",
+        "Join",
+        "Concat",
+        "Matplotlib",
+        "Line Charts",
+        "Bar Charts",
+        "Scatter Plots",
+        "Histograms",
+        "Seaborn",
+        "Heatmaps",
+        "Pair Plots",
+        "Statistical Visualization",
+      ],
+    },
+
+    // =====================================================
+    // MODULE 4 - MATHEMATICS & STATISTICS FOR AI
+    // =====================================================
+    {
+      name: "Module 4 - Mathematics & Statistics for AI",
+      topics: [
+        "Why Mathematics is Required for AI",
+        "Numbers and Variables",
+        "Algebra Fundamentals",
+        "Functions",
+        "Linear Equations",
+        "Matrices",
+        "Matrix Operations",
+        "Matrix Multiplication",
+        "Transpose",
+        "Inverse",
+        "Vectors",
+        "Vector Operations",
+        "Dot Product",
+        "Probability Fundamentals",
+        "Conditional Probability",
+        "Bayes Theorem",
+        "Random Variables",
+        "Probability Distributions",
+        "Mean",
+        "Median",
+        "Mode",
+        "Variance",
+        "Standard Deviation",
+        "Correlation",
+        "Covariance",
+        "Normal Distribution",
+        "Binomial Distribution",
+        "Central Limit Theorem",
+        "Hypothesis Testing",
+        "P-Value",
+        "Confidence Intervals",
+        "Statistical Significance",
+      ],
+    },
+
+    // =====================================================
+    // MODULE 5 - DATA PREPROCESSING
+    // =====================================================
+    {
+      name: "Module 5 - Data Preprocessing for AI",
+      topics: [
+        "Understanding Datasets",
+        "Structured Data",
+        "Unstructured Data",
+        "Data Collection",
+        "Data Exploration",
+        "Data Quality",
+        "Missing Values",
+        "Duplicate Records",
+        "Outlier Detection",
+        "Outlier Treatment",
+        "Data Cleaning",
+        "Data Transformation",
+        "Data Encoding",
+        "Label Encoding",
+        "One Hot Encoding",
+        "Feature Scaling",
+        "Normalization",
+        "Standardization",
+        "Feature Selection",
+        "Feature Extraction",
+        "Feature Engineering",
+        "Train Test Split",
+        "Cross Validation",
+        "Data Leakage",
+      ],
+    },
+
+    // =====================================================
+    // MODULE 6 - MACHINE LEARNING
+    // =====================================================
+    {
+      name: "Module 6 - Machine Learning",
+      topics: [
+        "Introduction to Machine Learning",
+        "Machine Learning Life Cycle",
+        "Supervised Learning",
+        "Unsupervised Learning",
+        "Semi-Supervised Learning",
+        "Reinforcement Learning",
+        "Regression",
+        "Classification",
+        "Clustering",
+        "Linear Regression",
+        "Multiple Linear Regression",
+        "Polynomial Regression",
+        "Logistic Regression",
+        "K-Nearest Neighbors",
+        "Naive Bayes",
+        "Decision Trees",
+        "Random Forest",
+        "Support Vector Machine",
+        "Gradient Boosting",
+        "XGBoost",
+        "LightGBM",
+        "K-Means Clustering",
+        "Hierarchical Clustering",
+        "DBSCAN",
+        "Principal Component Analysis",
+        "PCA",
+      ],
+    },
+
+    // =====================================================
+    // MODULE 7 - MACHINE LEARNING MODEL EVALUATION
+    // =====================================================
+    {
+      name: "Module 7 - Machine Learning Model Evaluation",
+      topics: [
+        "Model Training",
+        "Model Testing",
+        "Model Validation",
+        "Accuracy",
+        "Precision",
+        "Recall",
+        "F1 Score",
+        "Confusion Matrix",
+        "ROC Curve",
+        "AUC",
+        "Mean Absolute Error",
+        "Mean Squared Error",
+        "Root Mean Squared Error",
+        "R-Squared",
+        "Cross Validation",
+        "K-Fold Cross Validation",
+        "Hyperparameter Tuning",
+        "Grid Search",
+        "Random Search",
+        "Overfitting",
+        "Underfitting",
+        "Bias",
+        "Variance",
+        "Bias Variance Tradeoff",
+        "Model Selection",
+      ],
+    },
+
+    // =====================================================
+    // MODULE 8 - DEEP LEARNING
+    // =====================================================
+    {
+      name: "Module 8 - Deep Learning",
+      topics: [
+        "Introduction to Deep Learning",
+        "Machine Learning vs Deep Learning",
+        "Artificial Neural Networks",
+        "Biological Neurons",
+        "Artificial Neurons",
+        "Perceptron",
+        "Neural Network Architecture",
+        "Input Layer",
+        "Hidden Layer",
+        "Output Layer",
+        "Weights",
+        "Bias",
+        "Activation Functions",
+        "Sigmoid",
+        "Tanh",
+        "ReLU",
+        "Softmax",
+        "Forward Propagation",
+        "Backpropagation",
+        "Loss Functions",
+        "Optimization",
+        "Gradient Descent",
+        "Learning Rate",
+        "Epochs",
+        "Batch Size",
+        "Optimizers",
+        "SGD",
+        "Adam",
+        "Dropout",
+        "Batch Normalization",
+        "Early Stopping",
+      ],
+    },
+
+    // =====================================================
+    // MODULE 9 - TENSORFLOW & KERAS
+    // =====================================================
+    {
+      name: "Module 9 - TensorFlow & Keras",
+      topics: [
+        "Introduction to TensorFlow",
+        "TensorFlow Installation",
+        "TensorFlow Tensors",
+        "Tensor Operations",
+        "TensorFlow Variables",
+        "TensorFlow Computation",
+        "Keras Introduction",
+        "Sequential API",
+        "Functional API",
+        "Building Neural Networks",
+        "Compiling Models",
+        "Training Models",
+        "Model Evaluation",
+        "Model Prediction",
+        "Callbacks",
+        "Model Checkpoints",
+        "TensorBoard",
+        "Saving Models",
+        "Loading Models",
+        "Model Deployment",
+      ],
+    },
+
+    // =====================================================
+    // MODULE 10 - PYTORCH
+    // =====================================================
+    {
+      name: "Module 10 - PyTorch",
+      topics: [
+        "Introduction to PyTorch",
+        "PyTorch Installation",
+        "Tensors",
+        "Tensor Operations",
+        "Autograd",
+        "Neural Network Module",
+        "Datasets",
+        "DataLoaders",
+        "Training Loops",
+        "Loss Functions",
+        "Optimizers",
+        "Model Evaluation",
+        "Saving Models",
+        "Loading Models",
+        "GPU Training",
+      ],
+    },
+
+    // =====================================================
+    // MODULE 11 - NATURAL LANGUAGE PROCESSING
+    // =====================================================
+    {
+      name: "Module 11 - Natural Language Processing",
+      topics: [
+        "Introduction to NLP",
+        "NLP Applications",
+        "Text Data",
+        "Text Preprocessing",
+        "Tokenization",
+        "Sentence Tokenization",
+        "Word Tokenization",
+        "Stop Words",
+        "Stemming",
+        "Lemmatization",
+        "Part of Speech Tagging",
+        "Named Entity Recognition",
+        "Bag of Words",
+        "TF-IDF",
+        "N-Grams",
+        "Text Classification",
+        "Sentiment Analysis",
+        "Text Similarity",
+        "Word Embeddings",
+        "Word2Vec",
+        "GloVe",
+        "NLP Pipelines",
+      ],
+    },
+
+    // =====================================================
+    // MODULE 12 - COMPUTER VISION
+    // =====================================================
+    {
+      name: "Module 12 - Computer Vision",
+      topics: [
+        "Introduction to Computer Vision",
+        "Image Representation",
+        "Pixels",
+        "RGB",
+        "Image Loading",
+        "Image Resizing",
+        "Image Cropping",
+        "Image Rotation",
+        "Image Filtering",
+        "Image Enhancement",
+        "OpenCV",
+        "Image Processing",
+        "Edge Detection",
+        "Object Detection",
+        "Image Classification",
+        "Face Detection",
+        "OCR",
+        "Convolution",
+        "CNN Introduction",
+        "Pooling",
+        "CNN Architecture",
+        "Transfer Learning",
+      ],
+    },
+
+    // =====================================================
+    // MODULE 13 - CONVOLUTIONAL NEURAL NETWORKS
+    // =====================================================
+    {
+      name: "Module 13 - CNN & Image AI",
+      topics: [
+        "CNN Fundamentals",
+        "Convolution Operation",
+        "Filters",
+        "Feature Maps",
+        "Padding",
+        "Stride",
+        "Pooling",
+        "Max Pooling",
+        "Average Pooling",
+        "CNN Architecture",
+        "Image Classification",
+        "Data Augmentation",
+        "Transfer Learning",
+        "Pretrained Models",
+        "ResNet",
+        "VGG",
+        "MobileNet",
+        "Object Detection Concepts",
+        "Real-Time Image Recognition",
+      ],
+    },
+
+    // =====================================================
+    // MODULE 14 - GENERATIVE AI FUNDAMENTALS
+    // =====================================================
+    {
+      name: "Module 14 - Generative AI Fundamentals",
+      topics: [
+        "Introduction to Generative AI",
+        "What is Generative AI?",
+        "Traditional AI vs Generative AI",
+        "Machine Learning vs Generative AI",
+        "Generative AI Applications",
+        "Text Generation",
+        "Image Generation",
+        "Audio Generation",
+        "Video Generation",
+        "Code Generation",
+        "Synthetic Data Generation",
+        "Generative AI Architecture",
+        "Generative Models",
+        "Foundation Models",
+        "Multimodal AI",
+        "AI Model Capabilities",
+        "AI Limitations",
+        "AI Hallucinations",
+        "AI Safety",
+        "AI Ethics",
+        "Responsible AI",
+      ],
+    },
+
+    // =====================================================
+    // MODULE 15 - LARGE LANGUAGE MODELS
+    // =====================================================
+    {
+      name: "Module 15 - Large Language Models",
+      topics: [
+        "Introduction to Large Language Models",
+        "What are LLMs?",
+        "Evolution of Language Models",
+        "Language Models",
+        "Foundation Models",
+        "Transformer Architecture",
+        "Encoder",
+        "Decoder",
+        "Self Attention",
+        "Multi-Head Attention",
+        "Positional Encoding",
+        "Tokenization",
+        "Tokens",
+        "Token Embeddings",
+        "Context Window",
+        "Parameters",
+        "Model Weights",
+        "Inference",
+        "Temperature",
+        "Top-K Sampling",
+        "Top-P Sampling",
+        "Hallucination",
+        "LLM Limitations",
+        "LLM Evaluation",
+      ],
+    },
+
+    // =====================================================
+    // MODULE 16 - TRANSFORMERS & HUGGING FACE
+    // =====================================================
+    {
+      name: "Module 16 - Transformers & Hugging Face",
+      topics: [
+        "Introduction to Transformers",
+        "Transformer Architecture",
+        "Attention Mechanism",
+        "Encoder Models",
+        "Decoder Models",
+        "Encoder-Decoder Models",
+        "BERT",
+        "GPT",
+        "T5",
+        "Hugging Face",
+        "Hugging Face Hub",
+        "Transformers Library",
+        "Tokenizers",
+        "Datasets Library",
+        "Pipeline API",
+        "Pretrained Models",
+        "Model Loading",
+        "Text Generation",
+        "Text Classification",
+        "Question Answering",
+        "Summarization",
+        "Translation",
+        "Model Sharing",
+      ],
+    },
+
+    // =====================================================
+    // MODULE 17 - PROMPT ENGINEERING
+    // =====================================================
+    {
+      name: "Module 17 - Prompt Engineering",
+      topics: [
+        "Introduction to Prompt Engineering",
+        "What is a Prompt?",
+        "Prompt Structure",
+        "Prompt Components",
+        "System Instructions",
+        "User Instructions",
+        "Context",
+        "Constraints",
+        "Output Format",
+        "Zero-Shot Prompting",
+        "One-Shot Prompting",
+        "Few-Shot Prompting",
+        "Role Prompting",
+        "Chain-of-Thought Concepts",
+        "Step-by-Step Reasoning Prompts",
+        "Structured Output",
+        "JSON Output",
+        "Prompt Templates",
+        "Prompt Chaining",
+        "Prompt Optimization",
+        "Prompt Debugging",
+        "Prompt Evaluation",
+        "Business Prompt Engineering",
+      ],
+    },
+
+    // =====================================================
+    // MODULE 18 - AI TOOLS
+    // =====================================================
+    {
+      name: "Module 18 - Generative AI Tools",
+      topics: [
+        "ChatGPT",
+        "OpenAI Models",
+        "Google Gemini",
+        "Claude",
+        "Perplexity",
+        "Microsoft Copilot",
+        "Hugging Face",
+        "NotebookLM",
+        "AI Coding Assistants",
+        "GitHub Copilot",
+        "Cursor",
+        "AI Research Tools",
+        "AI Writing Tools",
+        "AI Presentation Tools",
+        "AI Image Generation Tools",
+        "AI Video Generation Tools",
+        "AI Audio Tools",
+        "AI Productivity Tools",
+      ],
+    },
+
+    // =====================================================
+    // MODULE 19 - OPENAI API
+    // =====================================================
+    {
+      name: "Module 19 - OpenAI API & LLM APIs",
+      topics: [
+        "Introduction to AI APIs",
+        "API Keys",
+        "Environment Variables",
+        "OpenAI API",
+        "LLM API Requests",
+        "Chat Completions",
+        "Text Generation",
+        "Structured Responses",
+        "JSON Responses",
+        "System Messages",
+        "User Messages",
+        "Temperature",
+        "Token Usage",
+        "API Error Handling",
+        "Rate Limits",
+        "API Cost Management",
+        "Python API Integration",
+        "JavaScript API Integration",
+        "Gemini API",
+        "Other LLM APIs",
+      ],
+    },
+
+    // =====================================================
+    // MODULE 20 - EMBEDDINGS
+    // =====================================================
+    {
+      name: "Module 20 - Embeddings & Semantic Search",
+      topics: [
+        "Introduction to Embeddings",
+        "What are Embeddings?",
+        "Text Embeddings",
+        "Document Embeddings",
+        "Vector Representation",
+        "Semantic Similarity",
+        "Cosine Similarity",
+        "Similarity Search",
+        "Embedding Models",
+        "Embedding Generation",
+        "Embedding Storage",
+        "Chunking",
+        "Text Splitting",
+        "Metadata",
+        "Semantic Search",
+        "Hybrid Search",
+      ],
+    },
+
+    // =====================================================
+    // MODULE 21 - VECTOR DATABASES
+    // =====================================================
+    {
+      name: "Module 21 - Vector Databases",
+      topics: [
+        "Introduction to Vector Databases",
+        "Why Vector Databases?",
+        "Vector Storage",
+        "Vector Indexing",
+        "Similarity Search",
+        "Metadata Filtering",
+        "Pinecone",
+        "ChromaDB",
+        "FAISS",
+        "Weaviate",
+        "Qdrant",
+        "Milvus",
+        "Vector Database Architecture",
+        "Creating Collections",
+        "Inserting Embeddings",
+        "Querying Vectors",
+        "Building Semantic Search",
+      ],
+    },
+
+    // =====================================================
+    // MODULE 22 - RAG
+    // =====================================================
+    {
+      name: "Module 22 - Retrieval Augmented Generation",
+      topics: [
+        "Introduction to RAG",
+        "What is RAG?",
+        "Why RAG?",
+        "RAG Architecture",
+        "Retrieval",
+        "Augmentation",
+        "Generation",
+        "Document Loading",
+        "Document Splitting",
+        "Text Chunking",
+        "Embedding Generation",
+        "Vector Storage",
+        "Similarity Search",
+        "Context Retrieval",
+        "Prompt Construction",
+        "LLM Response Generation",
+        "RAG Pipeline",
+        "RAG Evaluation",
+        "RAG Hallucination Reduction",
+        "Metadata Filtering",
+        "Hybrid RAG",
+        "Advanced RAG",
+      ],
+    },
+
+    // =====================================================
+    // MODULE 23 - LANGCHAIN
+    // =====================================================
+    {
+      name: "Module 23 - LangChain",
+      topics: [
+        "Introduction to LangChain",
+        "LangChain Architecture",
+        "Models",
+        "Prompts",
+        "Prompt Templates",
+        "Output Parsers",
+        "Chains",
+        "Sequential Chains",
+        "LCEL",
+        "Document Loaders",
+        "Text Splitters",
+        "Embeddings",
+        "Vector Stores",
+        "Retrievers",
+        "RAG Applications",
+        "Memory",
+        "Conversation History",
+        "Tools",
+        "Agents",
+        "Callbacks",
+        "LangChain Applications",
+      ],
+    },
+
+    // =====================================================
+    // MODULE 24 - LANGGRAPH
+    // =====================================================
+    {
+      name: "Module 24 - LangGraph & Stateful AI",
+      topics: [
+        "Introduction to LangGraph",
+        "Why LangGraph?",
+        "Graph-Based AI Workflows",
+        "Nodes",
+        "Edges",
+        "State",
+        "State Management",
+        "Conditional Routing",
+        "Loops",
+        "Human-in-the-Loop",
+        "Agent Workflows",
+        "Multi-Step Workflows",
+        "Tool Calling",
+        "Memory",
+        "Checkpointing",
+        "Agent Graphs",
+        "Production Workflows",
+      ],
+    },
+
+    // =====================================================
+    // MODULE 25 - AI AGENTS
+    // =====================================================
+    {
+      name: "Module 25 - AI Agents",
+      topics: [
+        "Introduction to AI Agents",
+        "What is an AI Agent?",
+        "AI Agent Architecture",
+        "LLM-Based Agents",
+        "Reasoning and Planning",
+        "Tool Usage",
+        "Function Calling",
+        "Tool Calling",
+        "Agent Memory",
+        "Short-Term Memory",
+        "Long-Term Memory",
+        "Agent Planning",
+        "Agent Execution",
+        "Agent Reflection",
+        "Autonomous Agents",
+        "Human-in-the-Loop Agents",
+        "Multi-Agent Systems",
+        "Agent Communication",
+        "Agent Orchestration",
+        "AI Agent Evaluation",
+      ],
+    },
+
+    // =====================================================
+    // MODULE 26 - FUNCTION CALLING & TOOLS
+    // =====================================================
+    {
+      name: "Module 26 - Function Calling & AI Tools",
+      topics: [
+        "Function Calling",
+        "Tool Calling",
+        "Tool Definitions",
+        "Structured Parameters",
+        "JSON Schema",
+        "API Tool Integration",
+        "Database Tool Integration",
+        "Search Tool Integration",
+        "Calculator Tools",
+        "File Tools",
+        "Custom Tools",
+        "External API Integration",
+        "Tool Selection",
+        "Tool Error Handling",
+        "Agent Tool Chains",
+      ],
+    },
+
+    // =====================================================
+    // MODULE 27 - FINE-TUNING
+    // =====================================================
+    {
+      name: "Module 27 - Fine-Tuning & Model Adaptation",
+      topics: [
+        "Introduction to Fine-Tuning",
+        "Why Fine-Tune a Model?",
+        "Prompting vs RAG vs Fine-Tuning",
+        "Fine-Tuning Workflow",
+        "Training Data Preparation",
+        "Dataset Creation",
+        "Data Formatting",
+        "Training Data Quality",
+        "Validation Dataset",
+        "Model Training",
+        "Model Evaluation",
+        "Instruction Fine-Tuning",
+        "Parameter-Efficient Fine-Tuning",
+        "LoRA",
+        "QLoRA",
+        "Adapters",
+        "Fine-Tuning Transformers",
+        "Fine-Tuning Open Models",
+        "Model Deployment",
+      ],
+    },
+
+    // =====================================================
+    // MODULE 28 - MULTIMODAL AI
+    // =====================================================
+    {
+      name: "Module 28 - Multimodal Generative AI",
+      topics: [
+        "Introduction to Multimodal AI",
+        "Text AI",
+        "Image AI",
+        "Audio AI",
+        "Video AI",
+        "Text-to-Image",
+        "Image-to-Text",
+        "Text-to-Audio",
+        "Speech-to-Text",
+        "Text-to-Speech",
+        "Image Understanding",
+        "Document Understanding",
+        "Vision-Language Models",
+        "Multimodal LLMs",
+        "AI Image Analysis",
+        "AI Document Analysis",
+      ],
+    },
+
+    // =====================================================
+    // MODULE 29 - AI AUTOMATION
+    // =====================================================
+    {
+      name: "Module 29 - AI Automation",
+      topics: [
+        "Introduction to AI Automation",
+        "AI Workflow Automation",
+        "Automated Data Processing",
+        "Automated Email Generation",
+        "Automated Report Generation",
+        "AI Document Processing",
+        "AI Customer Support",
+        "AI Chatbots",
+        "AI Content Automation",
+        "AI Data Extraction",
+        "AI Summarization",
+        "AI Classification",
+        "AI Workflow Integration",
+        "API-Based Automation",
+        "No-Code AI Automation",
+      ],
+    },
+
+    // =====================================================
+    // MODULE 30 - AI CHATBOT DEVELOPMENT
+    // =====================================================
+    {
+      name: "Module 30 - AI Chatbot Development",
+      topics: [
+        "Chatbot Fundamentals",
+        "Rule-Based Chatbots",
+        "AI Chatbots",
+        "LLM Chatbots",
+        "Conversation Design",
+        "Prompt-Based Chatbots",
+        "Memory-Based Chatbots",
+        "RAG Chatbots",
+        "Document Chatbots",
+        "Website Chatbots",
+        "Customer Support Chatbots",
+        "WhatsApp AI Chatbot Concepts",
+        "API Integration",
+        "Chatbot Security",
+        "Chatbot Deployment",
+      ],
+    },
+
+    // =====================================================
+    // MODULE 31 - AI FOR SOFTWARE DEVELOPMENT
+    // =====================================================
+    {
+      name: "Module 31 - AI for Software Development",
+      topics: [
+        "AI-Assisted Coding",
+        "GitHub Copilot",
+        "Cursor AI",
+        "Code Generation",
+        "Code Explanation",
+        "Code Refactoring",
+        "Bug Detection",
+        "Debugging with AI",
+        "Unit Test Generation",
+        "API Generation",
+        "Documentation Generation",
+        "SQL Query Generation",
+        "Code Review with AI",
+        "AI-Assisted Development",
+        "AI Development Best Practices",
+      ],
+    },
+
+    // =====================================================
+    // MODULE 32 - AI SECURITY & RESPONSIBLE AI
+    // =====================================================
+    {
+      name: "Module 32 - AI Security & Responsible AI",
+      topics: [
+        "Responsible AI",
+        "AI Ethics",
+        "AI Safety",
+        "AI Privacy",
+        "Data Privacy",
+        "Sensitive Data",
+        "Prompt Injection",
+        "Jailbreak Attacks",
+        "Data Leakage",
+        "Model Security",
+        "Adversarial Attacks",
+        "AI Bias",
+        "Fairness",
+        "Transparency",
+        "Explainability",
+        "Human Oversight",
+        "Secure AI Applications",
+        "AI Governance",
+      ],
+    },
+
+    // =====================================================
+    // MODULE 33 - AI EVALUATION
+    // =====================================================
+    {
+      name: "Module 33 - LLM & AI Evaluation",
+      topics: [
+        "Why AI Evaluation Matters",
+        "Model Evaluation",
+        "LLM Evaluation",
+        "Response Quality",
+        "Accuracy",
+        "Relevance",
+        "Faithfulness",
+        "Groundedness",
+        "Hallucination Detection",
+        "Prompt Evaluation",
+        "RAG Evaluation",
+        "Retrieval Evaluation",
+        "Generation Evaluation",
+        "Latency",
+        "Token Usage",
+        "Cost Evaluation",
+        "Human Evaluation",
+        "Automated Evaluation",
+        "AI Testing",
+      ],
+    },
+
+    // =====================================================
+    // MODULE 34 - AI DEPLOYMENT
+    // =====================================================
+    {
+      name: "Module 34 - AI Application Deployment",
+      topics: [
+        "AI Application Architecture",
+        "Model Serving",
+        "REST APIs",
+        "FastAPI",
+        "Flask",
+        "Streamlit",
+        "Gradio",
+        "API Authentication",
+        "Environment Variables",
+        "Secrets Management",
+        "Docker Fundamentals",
+        "Dockerizing AI Applications",
+        "Docker Images",
+        "Docker Containers",
+        "Cloud Deployment",
+        "AWS Basics for AI",
+        "Cloud AI Deployment",
+        "Application Monitoring",
+        "Logging",
+        "Production AI Applications",
+      ],
+    },
+
+    // =====================================================
+    // MODULE 35 - GIT & GITHUB FOR AI
+    // =====================================================
+    {
+      name: "Module 35 - Git & GitHub for AI",
+      topics: [
+        "Introduction to Git",
+        "Version Control",
+        "Git Installation",
+        "Git Configuration",
+        "Repository Creation",
+        "git init",
+        "git clone",
+        "git add",
+        "git commit",
+        "git status",
+        "git push",
+        "git pull",
+        "git fetch",
+        "Branching",
+        "Merging",
+        "Conflict Resolution",
+        "GitHub",
+        "GitHub Repositories",
+        "Pull Requests",
+        "README Files",
+        "AI Project Portfolio",
+        "Model Version Tracking",
+      ],
+    },
+
+    // =====================================================
+    // MODULE 36 - REAL-TIME AI PROJECTS
+    // =====================================================
+    {
+      name: "Module 36 - Real-Time AI Projects",
+      topics: [
+        "AI Project Requirement Analysis",
+        "AI Project Architecture",
+        "Dataset Collection",
+        "Data Preprocessing",
+        "Model Development",
+        "Model Evaluation",
+        "AI API Integration",
+        "GitHub Project Management",
+
+        // Project 1
+        "Machine Learning Prediction Project",
+
+        // Project 2
+        "NLP Sentiment Analysis Project",
+
+        // Project 3
+        "Computer Vision Project",
+
+        // Project 4
+        "AI Chatbot Project",
+
+        // Project 5
+        "Document Question Answering System",
+
+        // Project 6
+        "RAG-Based PDF Chatbot",
+
+        // Project 7
+        "AI Resume Analyzer",
+
+        // Project 8
+        "AI Content Generator",
+
+        // Project 9
+        "AI Customer Support Agent",
+
+        // Project 10
+        "AI Research Assistant",
+
+        // Project 11
+        "AI Data Analysis Agent",
+
+        // Project 12
+        "Multi-Agent AI Application",
+
+        "Project Documentation",
+        "Project Testing",
+        "Project Deployment",
+        "Project Presentation",
+      ],
+    },
+
+    // =====================================================
+    // MODULE 37 - CAPSTONE PROJECT
+    // =====================================================
+    {
+      name: "Module 37 - Industry Capstone Project",
+      topics: [
+        "Project Requirement Gathering",
+        "Problem Statement",
+        "System Architecture",
+        "Technology Selection",
+        "Data Collection",
+        "Data Processing",
+        "AI Model Selection",
+        "Prompt Engineering",
+        "LLM Integration",
+        "RAG Integration",
+        "Vector Database",
+        "AI Agent Development",
+        "API Integration",
+        "Frontend Integration",
+        "Authentication",
+        "Database Integration",
+        "Testing",
+        "AI Evaluation",
+        "Security",
+        "Deployment",
+        "GitHub Repository",
+        "Project Documentation",
+        "Project Demo",
+        "Project Presentation",
+      ],
+    },
+
+    // =====================================================
+    // MODULE 38 - INTERVIEW & CAREER PREPARATION
+    // =====================================================
+    {
+      name: "Module 38 - AI Interview & Career Preparation",
+      topics: [
+        "Artificial Intelligence Interview Questions",
+        "Machine Learning Interview Questions",
+        "Deep Learning Interview Questions",
+        "Python Interview Questions",
+        "NLP Interview Questions",
+        "Computer Vision Interview Questions",
+        "Generative AI Interview Questions",
+        "LLM Interview Questions",
+        "Prompt Engineering Interview Questions",
+        "RAG Interview Questions",
+        "Vector Database Interview Questions",
+        "LangChain Interview Questions",
+        "AI Agent Interview Questions",
+        "Fine-Tuning Interview Questions",
+        "AI API Interview Questions",
+        "Technical Interview Preparation",
+        "Project-Based Interview Questions",
+        "AI Resume Preparation",
+        "AI Portfolio Building",
+        "GitHub Portfolio",
+        "LinkedIn Profile Optimization",
+        "Mock Interviews",
+        "HR Interview Preparation",
+        "Communication Skills",
+        "Placement Preparation",
+      ],
+    },
+  ],
+},
   {
     title: "DevOps with AWS",
     image: devopsLogo,

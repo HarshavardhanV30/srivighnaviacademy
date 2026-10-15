@@ -1,43 +1,37 @@
-import React,{useState,useEffect}from'react';
-import{Link}from'react-router-dom';
-import logo from '../assets/logovighnaviacademy.png';
+import React from 'react';
+import { Phone, Mail } from 'lucide-react';
 
-export default function Header(){
-const[isMobile,setIsMobile]=useState(false);
-useEffect(()=>{
-const handleResize=()=>setIsMobile(window.innerWidth<=768);
-handleResize();
-window.addEventListener('resize',handleResize);
-return()=>window.removeEventListener('resize',handleResize);
-},[]);
-return(
-<>
-<style>{`
-.nav-link:hover{color:#00D2C4!important;transform:translateY(-2px)}
-.cta-button:hover{background-color:#00b3a6!important;box-shadow:0 0 18px rgba(0,210,196,.5);transform:translateY(-2px) scale(1.03)}
-.logo-brand:hover{color:#00D2C4!important}
-.logo-image{transition:all .3s ease}
-.logo-image:hover{transform:scale(1.03)}
-.logo-image img{image-rendering:auto;-webkit-font-smoothing:antialiased}
-`}</style>
-<nav style={{backgroundColor:'#030812',borderBottom:'1px solid rgba(255,255,255,.08)',padding:isMobile?'6px 18px':'6px 42px',display:'flex',justifyContent:'space-between',alignItems:'center',position:'sticky',top:0,zIndex:50,width:'100%',boxSizing:'border-box',minHeight:isMobile?'72px':'92px',overflow:'hidden'}}>
-<Link to="/" style={{display:'flex',alignItems:'center',gap:isMobile?'10px':'15px',textDecoration:'none',flexShrink:0}}>
-<div className="logo-image" style={{width:isMobile?'180px':'300px',height:isMobile?'70px':'80px',display:'flex',alignItems:'center',justifyContent:'center',overflow:'hidden',flexShrink:0,position:'relative',backgroundColor:'#030812'}}>
-<img src={logo} alt="Vighnavi Academy Logo" style={{width:isMobile?'330px':'210px',height:isMobile?'330px':'210px',maxWidth:'none',maxHeight:'none',objectFit:'cover',objectPosition:'center 30%',display:'block',position:'absolute',left:'30%',top:'50%',transform:'translate(-50%,-50%)',transformOrigin:'center'}}/>
-</div>
-</Link>
-{!isMobile&&(
-<div style={{display:'flex',alignItems:'center',gap:'38px',fontSize:'17px',fontWeight:'600'}}>
-<Link to="/" className="nav-link" style={{color:'#d1d5db',textDecoration:'none',transition:'all .2s ease'}}>Home</Link>
-<Link to="/courses" className="nav-link" style={{color:'#d1d5db',textDecoration:'none',transition:'all .2s ease'}}>Courses</Link>
-<Link to="/about" className="nav-link" style={{color:'#d1d5db',textDecoration:'none',transition:'all .2s ease'}}>About Us</Link>
-<Link to="/contact" className="nav-link" style={{color:'#d1d5db',textDecoration:'none',transition:'all .2s ease'}}>Contact Us</Link>
-</div>
-)}
-<div>
-<Link to="/contact" className="cta-button" style={{backgroundColor:'#00D2C4',color:'#000',padding:isMobile?'11px 17px':'13px 25px',borderRadius:'28px',textDecoration:'none',fontWeight:'700',fontSize:isMobile?'13px':'16px',display:'inline-block',transition:'all .3s ease',whiteSpace:'nowrap',boxShadow:'0 4px 12px rgba(0,210,196,.18)'}}>Book Consultation&nbsp; →</Link>
-</div>
-</nav>
-</>
-);
+export default function Header({ setActiveScreen }) {
+  return (
+    <div className="w-full border-b transition-colors duration-200 bg-neutral-100 dark:bg-neutral-950 border-neutral-200 dark:border-neutral-800 text-neutral-600 dark:text-neutral-400 py-2 px-4 text-xs">
+      <div className="max-w-7xl mx-auto flex items-center justify-between">
+        <div className="flex items-center space-x-3">
+          <span className="inline-flex items-center space-x-1.5 font-bold text-neutral-900 dark:text-white">
+            <span className="w-2 h-2 rounded-full bg-neutral-900 dark:bg-white animate-pulse"></span>
+            <span>Admissions & Bookings Open</span>
+          </span>
+          <span className="hidden sm:inline text-neutral-300 dark:text-neutral-700">|</span>
+          <span className="hidden sm:inline">Wisdom • Knowledge • Success</span>
+        </div>
+
+        <div className="flex items-center space-x-4">
+          <button
+            onClick={() => setActiveScreen && setActiveScreen('contact')}
+            className="inline-flex items-center space-x-1.5 text-neutral-700 dark:text-neutral-300 hover:text-black dark:hover:text-white transition-colors"
+          >
+            <Phone className="w-3.5 h-3.5 text-neutral-500 dark:text-neutral-400" />
+            <span>Support: +91 93906 42779</span>
+          </button>
+          <span className="hidden md:inline text-neutral-300 dark:text-neutral-700">|</span>
+          <button
+            onClick={() => setActiveScreen && setActiveScreen('contact')}
+            className="hidden md:inline-flex items-center space-x-1.5 text-neutral-700 dark:text-neutral-300 hover:text-black dark:hover:text-white transition-colors"
+          >
+            <Mail className="w-3.5 h-3.5 text-neutral-500 dark:text-neutral-400" />
+            <span>support@vighnaviacademy.com</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  );
 }

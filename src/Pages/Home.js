@@ -1,7 +1,4 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
 import javaLogo from '../assets/Java-Logo.png';
 import pythonLogo from '../assets/python logo.jpeg';
 import javaFullStack from '../assets/full stack java.jpeg';
@@ -13,11 +10,11 @@ import genaiLogo from '../assets/genai logo.png';
 import javaSqlLogo from '../assets/java with sql combo.png';
 import pythonSqlLogo from '../assets/python with sql logo.png';
 
-export default function Home() {
-  const navigate = useNavigate();
-
-  const go = (path) => {
-    navigate(path);
+export default function Home({ setActiveScreen }) {
+  const go = (screenKey) => {
+    if (typeof setActiveScreen === 'function') {
+      setActiveScreen(screenKey);
+    }
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
@@ -30,7 +27,7 @@ export default function Home() {
       skills: ['Core Java', 'OOP', 'Collections', 'Spring Boot', 'SQL'],
       rating: '4.9',
       learners: '2,850+',
-      color: '#087f79'
+      color: '#0284c7'
     },
     {
       title: 'Python Development',
@@ -50,7 +47,7 @@ export default function Home() {
       skills: ['Java', 'Spring Boot', 'HTML/CSS', 'React', 'MySQL'],
       rating: '4.8',
       learners: '2,100+',
-      color: '#0f766e'
+      color: '#0052cc'
     },
     {
       title: 'Python Full Stack',
@@ -70,7 +67,7 @@ export default function Home() {
       skills: ['MongoDB', 'Express', 'React', 'Node.js', 'Projects'],
       rating: '4.8',
       learners: '1,900+',
-      color: '#059669'
+      color: '#10b981'
     },
     {
       title: 'Data Analyst',
@@ -80,7 +77,7 @@ export default function Home() {
       skills: ['Excel', 'SQL', 'Python', 'Power BI', 'Visualization'],
       rating: '4.8',
       learners: '1,750+',
-      color: '#1d4ed8'
+      color: '#4f46e5'
     },
     {
       title: 'Generative AI',
@@ -90,7 +87,7 @@ export default function Home() {
       skills: ['AI/ML', 'Prompt Engineering', 'LLMs', 'LangChain', 'AI Projects'],
       rating: '4.9',
       learners: '1,500+',
-      color: '#115e59'
+      color: '#0ea5e9'
     },
     {
       title: 'Cloud & DevOps',
@@ -100,7 +97,7 @@ export default function Home() {
       skills: ['AWS', 'Linux', 'Docker', 'CI/CD', 'DevOps'],
       rating: '4.8',
       learners: '1,300+',
-      color: '#0369a1'
+      color: '#1d4ed8'
     },
     {
       title: 'Java with SQL',
@@ -110,7 +107,7 @@ export default function Home() {
       skills: ['Core Java', 'OOP', 'SQL', 'MySQL', 'Projects'],
       rating: '4.9',
       learners: '1,850+',
-      color: '#7c3aed'
+      color: '#6366f1'
     },
     {
       title: 'Python with SQL',
@@ -120,7 +117,7 @@ export default function Home() {
       skills: ['Python', 'SQL', 'MySQL', 'Data Handling', 'Projects'],
       rating: '4.9',
       learners: '1,950+',
-      color: '#0369a1'
+      color: '#0284c7'
     }
   ];
 
@@ -230,38 +227,44 @@ export default function Home() {
           0%,100%{transform:translateY(0)}
           50%{transform:translateY(-10px)}
         }
-        @keyframes pulseGlow {
-          0%,100%{box-shadow:0 0 0 0 rgba(10,125,118,.25)}
-          50%{box-shadow:0 0 0 12px rgba(10,125,118,0)}
+        @keyframes electricPulse {
+          0%,100%{box-shadow:0 0 15px rgba(0,140,255,0.25)}
+          50%{box-shadow:0 0 30px rgba(0,210,255,0.45)}
         }
         @keyframes whatsappPulse {
-          0%,100%{box-shadow:0 0 0 0 rgba(37,211,102,.35)}
+          0%,100%{box-shadow:0 0 0 0 rgba(37,211,102,.5)}
           50%{box-shadow:0 0 0 14px rgba(37,211,102,0)}
         }
         .home-card:hover{
           transform:translateY(-8px)!important;
-          box-shadow:0 20px 45px rgba(5,70,68,.13)!important;
+          border-color:#00a6ff!important;
+          box-shadow:0 20px 45px rgba(0,0,0,.7), 0 0 25px rgba(0,166,255,.25)!important;
         }
         .home-button:hover{
           transform:translateY(-2px);
-          box-shadow:0 12px 25px rgba(4,104,98,.25);
+          filter:brightness(1.15);
+          box-shadow:0 12px 28px rgba(0,102,255,.45);
         }
         .outline-button:hover{
-          background:#075e59!important;
-          color:#fff!important;
+          background:linear-gradient(135deg, #0052cc 0%, #0099ff 100%)!important;
+          border-color:#38bdf8!important;
+          color:#ffffff!important;
+          box-shadow:0 0 20px rgba(0,153,255,.35)!important;
         }
         .category-card:hover{
           transform:translateY(-7px)!important;
-          border-color:#0b8179!important;
-          box-shadow:0 15px 35px rgba(8,111,105,.12)!important;
+          border-color:#00a6ff!important;
+          background:#0e1526!important;
+          box-shadow:0 15px 35px rgba(0,0,0,.6), 0 0 20px rgba(0,166,255,.22)!important;
         }
         .why-card:hover{
           transform:translateY(-8px)!important;
-          box-shadow:0 20px 45px rgba(5,70,68,.14)!important;
-          border-color:#0b8179!important;
+          box-shadow:0 20px 45px rgba(0,0,0,.7), 0 0 24px rgba(0,140,255,.25)!important;
+          border-color:#00a6ff!important;
         }
         .whatsapp-button:hover{
           transform:scale(1.08);
+          box-shadow:0 10px 30px rgba(37,211,102,.65)!important;
         }
         @media(max-width:1100px){
           .home-course-grid{grid-template-columns:repeat(2,1fr)}
@@ -279,29 +282,28 @@ export default function Home() {
         }
         @media(max-width:600px){
           .home-hero{padding:50px 5%!important}
-          .home-hero-title{font-size:40px!important}
-          .home-section-title{font-size:34px!important}
+          .home-hero-title{font-size:38px!important}
+          .home-section-title{font-size:32px!important}
           .home-category-grid{grid-template-columns:1fr!important}
           .home-feature-grid{grid-template-columns:1fr!important}
           .home-course-grid{grid-template-columns:1fr!important}
           .home-why-grid{grid-template-columns:1fr!important}
           .home-demo-points{grid-template-columns:1fr!important}
-          .home-hero-image-card{height:380px!important}
-          .home-demo-image{height:380px!important}
+          .home-hero-image-card{height:340px!important}
+          .home-demo-image{height:340px!important}
           .home-mini-divider{display:none!important}
         }
       `}</style>
 
-      <Header />
-
+      {/* Hero Section */}
       <section style={styles.hero} className="home-hero">
         <div style={styles.heroOverlay}></div>
         <div style={styles.heroContent} className="home-hero-content">
-          <div style={styles.heroBadge}>🎓 LEARN • PRACTICE • BUILD • GROW</div>
+          <div style={styles.heroBadge}>⚡ UNLOCK INFINITY CAPABILITIES</div>
           <h1 style={styles.heroTitle} className="home-hero-title">
             Build Your Future
             <br />
-            With <span style={styles.goldText}>Vighnavi Academy</span>
+            With <span style={styles.royalBlueText}>Vighnavi Academy</span>
           </h1>
           <p style={styles.heroLead}>
             Industry-focused technical education designed to transform
@@ -313,10 +315,10 @@ export default function Home() {
             expert mentorship and real-world projects.
           </p>
           <div style={styles.heroButtons}>
-            <button className="home-button" style={styles.primaryButton} onClick={() => go('/courses')}>
+            <button className="home-button" style={styles.primaryButton} onClick={() => go('courses')}>
               Explore Courses <span>→</span>
             </button>
-            <button className="home-button" style={styles.secondaryButton} onClick={() => go('/contact')}>
+            <button className="home-button" style={styles.secondaryButton} onClick={() => go('contact')}>
               Book a Demo <span>↗</span>
             </button>
           </div>
@@ -352,9 +354,9 @@ export default function Home() {
             />
             <div style={styles.imageGradient}></div>
             <div style={styles.heroImageText}>
-              <span>SKILLS</span>
-              <strong>Create Opportunities</strong>
-              <small>Your Future Starts Here</small>
+              <span style={{ fontSize: '12px', letterSpacing: '2.5px', color: '#00d2ff', fontWeight: '800' }}>VIGHNAVI ACADEMY</span>
+              <strong style={{ fontSize: '20px', color: '#ffffff' }}>Unlock Infinity Capabilities</strong>
+              <small style={{ color: '#cbd5e1' }}>Your Future Starts Here</small>
             </div>
           </div>
           <div style={{ ...styles.floatingCard, top: '8%', left: '-5%' }}>
@@ -366,19 +368,21 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Trust Highlights */}
       <section style={styles.trustBar}>
-        <div><span>✓</span> Live Interactive Classes</div>
-        <div><span>✓</span> Industry Experts</div>
-        <div><span>✓</span> Real-World Projects</div>
-        <div><span>✓</span> Certification</div>
-        <div><span>✓</span> Career Guidance</div>
+        <div><span style={{ color: '#00d2ff', marginRight: '6px' }}>✓</span> Live Interactive Classes</div>
+        <div><span style={{ color: '#00d2ff', marginRight: '6px' }}>✓</span> Industry Experts</div>
+        <div><span style={{ color: '#00d2ff', marginRight: '6px' }}>✓</span> Real-World Projects</div>
+        <div><span style={{ color: '#00d2ff', marginRight: '6px' }}>✓</span> Certification</div>
+        <div><span style={{ color: '#00d2ff', marginRight: '6px' }}>✓</span> Career Guidance</div>
       </section>
 
+      {/* Top Categories */}
       <section style={styles.section}>
         <div style={styles.sectionHeading}>
           <small style={styles.eyebrow}>EXPLORE LEARNING</small>
           <h2 style={styles.sectionTitle} className="home-section-title">
-            Explore Top <span style={styles.goldText}>Categories</span>
+            Explore Top <span style={styles.cyanGradientText}>Categories</span>
           </h2>
           <p style={styles.sectionSubtitle}>
             Choose the right technology path and start building your future.
@@ -391,7 +395,7 @@ export default function Home() {
               key={index}
               className="category-card"
               style={styles.categoryCard}
-              onClick={() => go('/courses')}
+              onClick={() => go('courses')}
             >
               <div style={styles.categoryIcon}>{cat.icon}</div>
               <h3 style={styles.categoryTitle}>{cat.title}</h3>
@@ -402,6 +406,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Features */}
       <section style={styles.whySection}>
         <div style={styles.sectionHeading}>
           <small style={styles.eyebrow}>WHY VIGHNAVI ACADEMY</small>
@@ -424,11 +429,12 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Why Choose Us */}
       <section style={styles.whyChooseSection}>
         <div style={styles.sectionHeading}>
           <small style={styles.eyebrow}>WHY CHOOSE US</small>
           <h2 style={styles.sectionTitle} className="home-section-title">
-            Why Choose <span style={styles.goldText}>Vighnavi Academy?</span>
+            Why Choose <span style={styles.cyanGradientText}>Vighnavi Academy?</span>
           </h2>
           <p style={styles.sectionSubtitle}>
             More than just courses — we focus on practical skills, mentorship
@@ -476,19 +482,20 @@ export default function Home() {
             <strong>100+</strong>
             <span>Practice Opportunities</span>
           </div>
-          <div style={styles.whyChooseBottomItem}>
+          <div style={{ ...styles.whyChooseBottomItem, borderRight: 'none' }}>
             <strong>1:1</strong>
             <span>Mentor Guidance</span>
           </div>
         </div>
       </section>
 
+      {/* Programs / Courses */}
       <section style={styles.courseSection}>
         <div style={styles.courseHeader}>
           <div>
             <small style={styles.eyebrow}>OUR PROGRAMS</small>
             <h2 style={styles.sectionTitle} className="home-section-title">
-              Build Skills. <span style={styles.goldText}>Build Your Career.</span>
+              Build Skills. <span style={styles.cyanGradientText}>Build Your Career.</span>
             </h2>
             <p style={styles.sectionSubtitle}>
               Explore our industry-focused technical courses.
@@ -498,7 +505,7 @@ export default function Home() {
           <button
             className="outline-button"
             style={styles.outlineButton}
-            onClick={() => go('/courses')}
+            onClick={() => go('courses')}
           >
             View All Courses →
           </button>
@@ -552,7 +559,7 @@ export default function Home() {
                   <button
                     className="home-button"
                     style={styles.courseButton}
-                    onClick={() => go('/courses')}
+                    onClick={() => go('courses')}
                   >
                     View Details →
                   </button>
@@ -563,6 +570,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Demo Section */}
       <section style={styles.demoSection} className="home-demo-section">
         <div style={styles.demoImageBox} className="home-demo-image">
           <img
@@ -585,7 +593,7 @@ export default function Home() {
           <small style={styles.eyebrow}>START YOUR JOURNEY</small>
 
           <h2 style={styles.demoTitle}>
-            Experience Our <span style={styles.goldText}>Learning Style</span>
+            Experience Our <span style={styles.cyanGradientText}>Learning Style</span>
           </h2>
 
           <p style={styles.demoDescription}>
@@ -595,15 +603,15 @@ export default function Home() {
           </p>
 
           <div style={styles.demoPoints} className="home-demo-points">
-            <div><span>✓</span><strong>Meet the Trainer</strong></div>
-            <div><span>✓</span><strong>Understand Course Structure</strong></div>
-            <div><span>✓</span><strong>Experience Practical Teaching</strong></div>
-            <div><span>✓</span><strong>Ask Your Questions</strong></div>
+            <div><span style={{ color: '#00d2ff', marginRight: '6px' }}>✓</span><strong>Meet the Trainer</strong></div>
+            <div><span style={{ color: '#00d2ff', marginRight: '6px' }}>✓</span><strong>Understand Course Structure</strong></div>
+            <div><span style={{ color: '#00d2ff', marginRight: '6px' }}>✓</span><strong>Experience Practical Teaching</strong></div>
+            <div><span style={{ color: '#00d2ff', marginRight: '6px' }}>✓</span><strong>Ask Your Questions</strong></div>
           </div>
 
           <div style={styles.demoNote}>
-            <strong>Demo Class Confirmation</strong>
-            <p>
+            <strong style={{ color: '#f8fafc' }}>Demo Class Confirmation</strong>
+            <p style={{ margin: '6px 0 0', color: '#94a3b8' }}>
               Demo class confirmation fees, if applicable, will be discussed
               separately during the demo/class confirmation process.
             </p>
@@ -612,19 +620,20 @@ export default function Home() {
           <button
             className="home-button"
             style={styles.primaryButtonDark}
-            onClick={() => go('/contact')}
+            onClick={() => go('contact')}
           >
             Schedule Demo Class →
           </button>
         </div>
       </section>
 
+      {/* Testimonials */}
       <section style={styles.testimonialSection}>
         <div style={styles.sectionHeading}>
           <small style={styles.eyebrow}>LEARNER STORIES</small>
 
           <h2 style={styles.sectionTitle} className="home-section-title">
-            What Our <span style={styles.goldText}>Learners Say</span>
+            What Our <span style={styles.cyanGradientText}>Learners Say</span>
           </h2>
 
           <p style={styles.sectionSubtitle}>
@@ -656,12 +665,13 @@ export default function Home() {
         <button
           className="outline-button"
           style={styles.testimonialButton}
-          onClick={() => go('/contact')}
+          onClick={() => go('contact')}
         >
           Read More Success Stories →
         </button>
       </section>
 
+      {/* Final Call to Action */}
       <section style={styles.finalBanner}>
         <div style={styles.finalBannerGlow}></div>
 
@@ -669,7 +679,7 @@ export default function Home() {
           <small style={styles.finalEyebrow}>YOUR FUTURE STARTS HERE</small>
 
           <h2 style={styles.finalTitle}>
-            Ready to Learn, Build & <span>Grow?</span>
+            Ready to Learn, Build & <span style={{ color: '#00d2ff' }}>Grow?</span>
           </h2>
 
           <p style={styles.finalDescription}>
@@ -681,7 +691,7 @@ export default function Home() {
             <button
               className="home-button"
               style={styles.finalPrimary}
-              onClick={() => go('/courses')}
+              onClick={() => go('courses')}
             >
               Explore Courses →
             </button>
@@ -689,7 +699,7 @@ export default function Home() {
             <button
               className="home-button"
               style={styles.finalSecondary}
-              onClick={() => go('/contact')}
+              onClick={() => go('contact')}
             >
               Contact Our Team
             </button>
@@ -697,6 +707,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Floating WhatsApp Action Button with SVG */}
       <button
         className="whatsapp-button"
         style={styles.whatsappButton}
@@ -704,118 +715,573 @@ export default function Home() {
         aria-label="Connect with Vighnavi Academy on WhatsApp"
         title="Chat with us on WhatsApp"
       >
-        <span style={styles.whatsappIcon}>◉</span>
+        <svg
+          style={styles.whatsappSvg}
+          viewBox="0 0 24 24"
+          width="32"
+          height="32"
+          fill="currentColor"
+        >
+          <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+        </svg>
       </button>
-
-      <Footer />
     </div>
   );
 }
 
 const styles = {
-  container:{fontFamily:"'Inter','Segoe UI',Arial,sans-serif",background:'#ffffff',color:'#123238',overflowX:'hidden'},
-  hero:{minHeight:'650px',background:'linear-gradient(120deg,#eaf8f6 0%,#f8fcfb 48%,#dff3ef 100%)',display:'flex',alignItems:'center',justifyContent:'space-between',padding:'70px 6%',gap:'60px',position:'relative',overflow:'hidden'},
-  heroOverlay:{position:'absolute',width:'420px',height:'420px',borderRadius:'50%',background:'rgba(19,125,118,.08)',right:'-100px',top:'-120px'},
-  heroContent:{flex:1,maxWidth:'620px',position:'relative',zIndex:2},
-  heroBadge:{display:'inline-block',padding:'10px 18px',borderRadius:'30px',background:'#ffffff',color:'#08756f',fontSize:'13px',fontWeight:'800',letterSpacing:'1.2px',marginBottom:'22px',boxShadow:'0 8px 25px rgba(0,70,65,.08)'},
-  heroTitle:{fontFamily:"Georgia,'Times New Roman',serif",fontSize:'58px',lineHeight:'1.03',margin:'0 0 22px',color:'#073a40',fontWeight:'700'},
-  goldText:{color:'#c28a16'},
-  heroLead:{fontSize:'21px',lineHeight:'1.5',fontWeight:'600',color:'#244b52',margin:'0 0 12px'},
-  heroDescription:{fontSize:'16px',lineHeight:'1.7',color:'#52686d',maxWidth:'590px',margin:'0 0 30px'},
-  heroButtons:{display:'flex',gap:'14px',flexWrap:'wrap',marginBottom:'35px'},
-  primaryButton:{border:'none',background:'#066e69',color:'#ffffff',padding:'15px 28px',borderRadius:'30px',fontSize:'16px',fontWeight:'800',cursor:'pointer',transition:'all .3s ease'},
-  secondaryButton:{border:'1px solid #c69428',background:'#ffffff',color:'#16444a',padding:'14px 27px',borderRadius:'30px',fontSize:'16px',fontWeight:'800',cursor:'pointer',transition:'all .3s ease'},
-  heroMiniStats:{display:'flex',alignItems:'center',gap:'18px',flexWrap:'wrap'},
-  statNumber:{display:'block',color:'#075f5a',fontSize:'18px',fontWeight:'900'},
-  statLabel:{display:'block',color:'#66777b',fontSize:'12px',marginTop:'3px'},
-  miniDivider:{width:'1px',height:'40px',background:'#c8dcd9'},
-  heroVisual:{flex:1,maxWidth:'600px',minWidth:'320px',position:'relative'},
-  heroImageCard:{height:'470px',borderRadius:'35px',overflow:'hidden',position:'relative',boxShadow:'0 30px 60px rgba(0,67,64,.2)'},
-  heroImage:{width:'100%',height:'100%',objectFit:'cover'},
-  imageGradient:{position:'absolute',inset:0,background:'linear-gradient(0deg,rgba(0,55,53,.8),transparent 55%)'},
-  heroImageText:{position:'absolute',bottom:'35px',left:'35px',color:'#ffffff',display:'flex',flexDirection:'column',gap:'4px'},
-  floatingCard:{position:'absolute',zIndex:3,padding:'15px 20px',background:'#ffffff',color:'#075e59',borderRadius:'16px',fontSize:'14px',boxShadow:'0 15px 35px rgba(0,50,48,.15)',animation:'floatUp 3s ease-in-out infinite'},
-  trustBar:{padding:'24px 6%',background:'#075d59',color:'#ffffff',display:'flex',justifyContent:'space-around',gap:'20px',flexWrap:'wrap',fontSize:'15px',fontWeight:'700'},
-  section:{padding:'80px 6%',background:'#ffffff'},
-  sectionHeading:{textAlign:'center',maxWidth:'850px',margin:'0 auto 45px'},
-  eyebrow:{display:'block',color:'#08736d',letterSpacing:'3px',fontSize:'12px',fontWeight:'900',marginBottom:'10px'},
-  sectionTitle:{fontFamily:"Georgia,'Times New Roman',serif",fontSize:'43px',color:'#073b41',margin:'0 0 10px',lineHeight:'1.15'},
-  sectionSubtitle:{color:'#64767b',fontSize:'16px',lineHeight:'1.6',margin:0},
-  categoryGrid:{display:'grid',gridTemplateColumns:'repeat(4,minmax(0,1fr))',gap:'18px'},
-  categoryCard:{padding:'28px 20px',borderRadius:'20px',background:'linear-gradient(145deg,#f9fdfc,#edf8f6)',border:'1px solid #dcebe8',textAlign:'center',cursor:'pointer',transition:'all .3s ease'},
-  categoryIcon:{width:'65px',height:'65px',borderRadius:'18px',background:'#ffffff',display:'flex',alignItems:'center',justifyContent:'center',fontSize:'31px',margin:'0 auto 16px',boxShadow:'0 8px 20px rgba(0,70,65,.08)'},
-  categoryTitle:{fontSize:'18px',margin:'0 0 6px',color:'#103f45'},
-  categorySub:{margin:'0 0 13px',color:'#718186',fontSize:'14px'},
-  categoryArrow:{fontSize:'13px',color:'#08756f',fontWeight:'800'},
-  whySection:{padding:'80px 6%',background:'#eef8f6'},
-  featureGrid:{display:'grid',gridTemplateColumns:'repeat(3,minmax(0,1fr))',gap:'20px'},
-  featureCard:{padding:'30px',background:'#ffffff',border:'1px solid #dceae8',borderRadius:'20px',textAlign:'center',transition:'all .3s ease'},
-  featureIcon:{width:'65px',height:'65px',display:'flex',alignItems:'center',justifyContent:'center',margin:'0 auto 18px',background:'#edf8f6',borderRadius:'18px',fontSize:'30px'},
-  featureTitle:{fontSize:'18px',color:'#103f45',margin:'0 0 10px'},
-  featureDescription:{color:'#6c7b80',fontSize:'14px',lineHeight:'1.65',margin:0},
-  whyChooseSection:{padding:'85px 6%',background:'linear-gradient(135deg,#f9fcfb 0%,#edf8f6 50%,#ffffff 100%)',position:'relative',overflow:'hidden'},
-  whyChooseIntro:{maxWidth:'1000px',margin:'0 auto 35px',padding:'25px 30px',borderRadius:'22px',background:'#ffffff',border:'1px solid #dceae8',display:'flex',alignItems:'center',gap:'22px',boxShadow:'0 12px 35px rgba(0,65,60,.07)'},
-  whyChooseIntroIcon:{minWidth:'65px',height:'65px',borderRadius:'18px',background:'#edf8f6',display:'flex',alignItems:'center',justifyContent:'center',fontSize:'30px'},
-  whyChooseIntroTitle:{color:'#103f45',fontFamily:"Georgia,'Times New Roman',serif",fontSize:'23px',margin:'0 0 7px'},
-  whyChooseIntroText:{color:'#65777b',fontSize:'14px',lineHeight:'1.7',margin:0},
-  whyChooseGrid:{maxWidth:'1100px',margin:'0 auto',display:'grid',gridTemplateColumns:'repeat(3,minmax(0,1fr))',gap:'20px'},
-  whyChooseCard:{position:'relative',background:'#ffffff',border:'1px solid #dceae8',borderRadius:'22px',padding:'27px',display:'flex',alignItems:'flex-start',gap:'17px',minHeight:'175px',transition:'all .3s ease',overflow:'hidden'},
-  whyChooseIcon:{minWidth:'58px',width:'58px',height:'58px',borderRadius:'16px',background:'#edf8f6',display:'flex',alignItems:'center',justifyContent:'center',fontSize:'27px'},
-  whyChooseContent:{position:'relative',zIndex:2},
-  whyChooseTitle:{margin:'2px 0 8px',color:'#103f45',fontSize:'17px',fontWeight:'800'},
-  whyChooseDescription:{margin:0,color:'#6a7b80',fontSize:'13px',lineHeight:'1.65'},
-  whyChooseNumber:{position:'absolute',right:'15px',bottom:'-14px',fontSize:'62px',fontWeight:'900',color:'rgba(7,95,90,.055)',lineHeight:1},
-  whyChooseBottom:{maxWidth:'1000px',margin:'38px auto 0',display:'grid',gridTemplateColumns:'repeat(4,1fr)',gap:'15px',padding:'22px',borderRadius:'20px',background:'#075f5a',boxShadow:'0 20px 40px rgba(0,65,60,.14)'},
-  whyChooseBottomItem:{textAlign:'center',color:'#ffffff',display:'flex',flexDirection:'column',gap:'5px',borderRight:'1px solid rgba(255,255,255,.18)'},
-  courseSection:{padding:'80px 6%',background:'#f9fcfb'},
-  courseHeader:{display:'flex',justifyContent:'space-between',alignItems:'flex-end',gap:'25px',marginBottom:'40px',flexWrap:'wrap'},
-  outlineButton:{border:'1px solid #0a756e',color:'#075f5a',background:'#ffffff',borderRadius:'28px',padding:'13px 22px',fontSize:'14px',fontWeight:'800',cursor:'pointer',transition:'all .3s ease'},
-  courseGrid:{display:'grid',gridTemplateColumns:'repeat(4,minmax(0,1fr))',gap:'22px'},
-  courseCard:{background:'#ffffff',border:'1px solid #dceae8',borderRadius:'20px',overflow:'hidden',transition:'all .3s ease',boxShadow:'0 5px 20px rgba(0,60,55,.04)'},
-  courseImageWrapper:{height:'190px',position:'relative',overflow:'hidden'},
-  courseImage:{width:'100%',height:'100%',objectFit:'cover'},
-  courseImageOverlay:{position:'absolute',inset:0,background:'linear-gradient(0deg,rgba(0,50,48,.65),transparent 65%)'},
-  courseTag:{position:'absolute',top:'15px',left:'15px',color:'#ffffff',padding:'7px 12px',borderRadius:'20px',fontSize:'11px',fontWeight:'800'},
-  courseImageLabel:{position:'absolute',bottom:'15px',left:'17px',color:'#ffffff',display:'flex',flexDirection:'column',fontSize:'11px',letterSpacing:'2px'},
-  courseBody:{padding:'20px'},
-  courseRating:{color:'#b27c13',fontSize:'13px',fontWeight:'800',marginBottom:'9px'},
-  courseTitle:{color:'#103e44',fontFamily:"Georgia,'Times New Roman',serif",fontSize:'21px',margin:'0 0 9px',lineHeight:'1.2'},
-  courseDescription:{color:'#66777c',fontSize:'13px',lineHeight:'1.55',minHeight:'62px',margin:'0 0 15px'},
-  skillsBox:{display:'flex',flexDirection:'column',gap:'6px',padding:'13px',borderRadius:'12px',background:'#f3f9f8',marginBottom:'17px'},
-  courseFooter:{borderTop:'1px solid #edf0ef',paddingTop:'15px',display:'flex',flexDirection:'column',gap:'12px'},
-  learningText:{fontSize:'12px',color:'#587076',fontWeight:'700'},
-  courseButton:{width:'100%',border:'none',background:'#075f5a',color:'#ffffff',padding:'12px 15px',borderRadius:'25px',fontWeight:'800',cursor:'pointer',transition:'all .3s ease'},
-  demoSection:{padding:'80px 6%',display:'grid',gridTemplateColumns:'1fr 1fr',gap:'60px',alignItems:'center',background:'#ffffff'},
-  demoImageBox:{height:'500px',borderRadius:'28px',overflow:'hidden',position:'relative',boxShadow:'0 25px 55px rgba(0,60,57,.15)'},
-  demoImage:{width:'100%',height:'100%',objectFit:'cover'},
-  demoImageOverlay:{position:'absolute',inset:0,background:'linear-gradient(0deg,rgba(0,61,58,.75),transparent 65%)'},
-  demoQuote:{position:'absolute',bottom:'35px',left:'35px',color:'#ffffff',display:'flex',flexDirection:'column'},
-  quoteIcon:{fontFamily:'Georgia',fontSize:'50px',color:'#c69525',lineHeight:'.7'},
-  demoContent:{maxWidth:'600px'},
-  demoTitle:{fontFamily:"Georgia,'Times New Roman',serif",color:'#073b41',fontSize:'44px',lineHeight:'1.15',margin:'0 0 18px'},
-  demoDescription:{color:'#64777b',fontSize:'16px',lineHeight:'1.7',marginBottom:'24px'},
-  demoPoints:{display:'grid',gridTemplateColumns:'1fr 1fr',gap:'12px',marginBottom:'20px'},
-  demoNote:{background:'#f1f8f6',borderLeft:'4px solid #c69428',padding:'15px 18px',borderRadius:'8px',marginBottom:'22px'},
-  primaryButtonDark:{border:'none',background:'#075f5a',color:'#ffffff',padding:'15px 27px',borderRadius:'28px',fontSize:'15px',fontWeight:'800',cursor:'pointer',transition:'all .3s ease'},
-  testimonialSection:{padding:'80px 6%',background:'#eef8f6',textAlign:'center'},
-  testimonialGrid:{display:'grid',gridTemplateColumns:'repeat(3,minmax(0,1fr))',gap:'22px',textAlign:'left'},
-  testimonialCard:{background:'#ffffff',borderRadius:'20px',padding:'28px',border:'1px solid #dceae8',transition:'all .3s ease'},
-  testimonialStars:{color:'#c58a17',letterSpacing:'3px',marginBottom:'15px'},
-  testimonialQuote:{color:'#52676c',lineHeight:'1.7',fontSize:'15px',minHeight:'95px'},
-  userRow:{display:'flex',alignItems:'center',gap:'12px',borderTop:'1px solid #edf0ef',paddingTop:'17px'},
-  avatar:{width:'45px',height:'45px',borderRadius:'50%',background:'#075f5a',color:'#ffffff',display:'flex',alignItems:'center',justifyContent:'center',fontSize:'18px',fontWeight:'800'},
-  userName:{display:'block',color:'#103f45'},
-  userRole:{display:'block',color:'#718186',fontSize:'12px',marginTop:'3px'},
-  testimonialButton:{marginTop:'35px',padding:'13px 25px',borderRadius:'25px',background:'#ffffff',color:'#075f5a',border:'1px solid #075f5a',fontWeight:'800',cursor:'pointer'},
-  finalBanner:{position:'relative',overflow:'hidden',padding:'85px 6%',background:'linear-gradient(125deg,#034d4b,#08756e,#063f42)',color:'#ffffff',textAlign:'center'},
-  finalBannerGlow:{position:'absolute',width:'450px',height:'450px',borderRadius:'50%',background:'rgba(255,255,255,.05)',top:'-250px',right:'-100px'},
-  finalContent:{position:'relative',zIndex:2,maxWidth:'850px',margin:'0 auto'},
-  finalEyebrow:{color:'#e5bb57',letterSpacing:'3px',fontSize:'12px',fontWeight:'900'},
-  finalTitle:{fontFamily:"Georgia,'Times New Roman',serif",fontSize:'46px',margin:'12px 0',lineHeight:'1.2'},
-  finalDescription:{fontSize:'17px',color:'#d6ece9',marginBottom:'28px'},
-  finalButtons:{display:'flex',justifyContent:'center',gap:'14px',flexWrap:'wrap'},
-  finalPrimary:{border:'none',background:'#e8b944',color:'#153d40',padding:'15px 28px',borderRadius:'28px',fontSize:'15px',fontWeight:'900',cursor:'pointer'},
-  finalSecondary:{border:'1px solid rgba(255,255,255,.6)',background:'transparent',color:'#ffffff',padding:'14px 28px',borderRadius:'28px',fontSize:'15px',fontWeight:'800',cursor:'pointer'},
-  whatsappButton:{position:'fixed',right:'25px',bottom:'25px',width:'62px',height:'62px',borderRadius:'50%',border:'none',background:'#25D366',color:'#ffffff',display:'flex',alignItems:'center',justifyContent:'center',cursor:'pointer',zIndex:9999,boxShadow:'0 8px 25px rgba(37,211,102,.35)',animation:'whatsappPulse 2s infinite',transition:'all .3s ease'},
-  whatsappIcon:{fontSize:'32px',fontWeight:'900',lineHeight:1,transform:'rotate(-20deg)'}
+  container: {
+    fontFamily: "'Inter','Segoe UI',Arial,sans-serif",
+    background: '#06080d',
+    color: '#e2e8f0',
+    overflowX: 'hidden'
+  },
+  hero: {
+    minHeight: '650px',
+    background: 'radial-gradient(ellipse at 80% 25%, rgba(0, 102, 255, 0.22) 0%, rgba(6, 8, 13, 0.95) 70%)',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    padding: '70px 6%',
+    gap: '60px',
+    position: 'relative',
+    overflow: 'hidden',
+    borderBottom: '1px solid rgba(0, 166, 255, 0.15)'
+  },
+  heroOverlay: {
+    position: 'absolute',
+    width: '500px',
+    height: '500px',
+    borderRadius: '50%',
+    background: 'radial-gradient(circle, rgba(0, 210, 255, 0.15) 0%, rgba(0,0,0,0) 70%)',
+    right: '-100px',
+    top: '-120px'
+  },
+  heroContent: { flex: 1, maxWidth: '620px', position: 'relative', zIndex: 2 },
+  heroBadge: {
+    display: 'inline-block',
+    padding: '9px 18px',
+    borderRadius: '30px',
+    background: 'rgba(0, 40, 95, 0.45)',
+    border: '1px solid rgba(0, 210, 255, 0.45)',
+    color: '#38bdf8',
+    fontSize: '12px',
+    fontWeight: '800',
+    letterSpacing: '1.4px',
+    marginBottom: '22px',
+    boxShadow: '0 4px 20px rgba(0, 102, 255, 0.25)'
+  },
+  heroTitle: {
+    fontFamily: "Georgia,'Times New Roman',serif",
+    fontSize: '56px',
+    lineHeight: '1.08',
+    margin: '0 0 22px',
+    color: '#f8fafc',
+    fontWeight: '700'
+  },
+  royalBlueText: {
+    background: 'linear-gradient(90deg, #00d2ff 0%, #3b82f6 50%, #93c5fd 100%)',
+    WebkitBackgroundClip: 'text',
+    WebkitTextFillColor: 'transparent',
+    display: 'inline-block'
+  },
+  cyanGradientText: {
+    background: 'linear-gradient(90deg, #38bdf8 0%, #60a5fa 100%)',
+    WebkitBackgroundClip: 'text',
+    WebkitTextFillColor: 'transparent',
+    display: 'inline-block'
+  },
+  goldText: { color: '#facc15' },
+  heroLead: { fontSize: '20px', lineHeight: '1.5', fontWeight: '600', color: '#cbd5e1', margin: '0 0 12px' },
+  heroDescription: { fontSize: '15px', lineHeight: '1.7', color: '#94a3b8', maxWidth: '590px', margin: '0 0 30px' },
+  heroButtons: { display: 'flex', gap: '14px', flexWrap: 'wrap', marginBottom: '35px' },
+  primaryButton: {
+    border: 'none',
+    background: 'linear-gradient(135deg, #0052cc 0%, #0088ff 100%)',
+    color: '#ffffff',
+    padding: '15px 30px',
+    borderRadius: '30px',
+    fontSize: '15px',
+    fontWeight: '800',
+    cursor: 'pointer',
+    transition: 'all .3s ease',
+    boxShadow: '0 4px 20px rgba(0, 102, 255, 0.45)',
+    border: '1px solid rgba(255,255,255,0.2)'
+  },
+  secondaryButton: {
+    border: '1px solid rgba(0, 210, 255, 0.6)',
+    background: 'rgba(0, 30, 70, 0.4)',
+    color: '#38bdf8',
+    padding: '14px 28px',
+    borderRadius: '30px',
+    fontSize: '15px',
+    fontWeight: '800',
+    cursor: 'pointer',
+    transition: 'all .3s ease',
+    boxShadow: '0 0 15px rgba(0, 166, 255, 0.15)'
+  },
+  heroMiniStats: { display: 'flex', alignItems: 'center', gap: '18px', flexWrap: 'wrap' },
+  statNumber: { display: 'block', color: '#38bdf8', fontSize: '20px', fontWeight: '900' },
+  statLabel: { display: 'block', color: '#94a3b8', fontSize: '12px', marginTop: '3px' },
+  miniDivider: { width: '1px', height: '40px', background: 'rgba(0, 166, 255, 0.2)' },
+  heroVisual: { flex: 1, maxWidth: '600px', minWidth: '320px', position: 'relative' },
+  heroImageCard: {
+    height: '470px',
+    borderRadius: '30px',
+    overflow: 'hidden',
+    position: 'relative',
+    border: '1px solid rgba(0, 166, 255, 0.35)',
+    boxShadow: '0 25px 60px rgba(0, 0, 0, 0.9), 0 0 35px rgba(0, 102, 255, 0.25)'
+  },
+  heroImage: { width: '100%', height: '100%', objectFit: 'cover' },
+  imageGradient: {
+    position: 'absolute',
+    inset: 0,
+    background: 'linear-gradient(0deg, #06080d 0%, rgba(6, 8, 13, 0.5) 50%, transparent 100%)'
+  },
+  heroImageText: { position: 'absolute', bottom: '30px', left: '30px', color: '#ffffff', display: 'flex', flexDirection: 'column', gap: '4px' },
+  floatingCard: {
+    position: 'absolute',
+    zIndex: 3,
+    padding: '14px 20px',
+    background: 'rgba(10, 18, 36, 0.92)',
+    backdropFilter: 'blur(8px)',
+    color: '#e2e8f0',
+    border: '1px solid rgba(0, 210, 255, 0.4)',
+    borderRadius: '16px',
+    fontSize: '14px',
+    boxShadow: '0 15px 35px rgba(0,0,0,.7), 0 0 15px rgba(0,102,255,.25)',
+    animation: 'floatUp 3s ease-in-out infinite'
+  },
+  trustBar: {
+    padding: '22px 6%',
+    background: '#09101f',
+    borderBottom: '1px solid rgba(0, 166, 255, 0.15)',
+    color: '#cbd5e1',
+    display: 'flex',
+    justifyContent: 'space-around',
+    gap: '20px',
+    flexWrap: 'wrap',
+    fontSize: '14px',
+    fontWeight: '700'
+  },
+  section: { padding: '80px 6%', background: '#06080d' },
+  sectionHeading: { textAlign: 'center', maxWidth: '850px', margin: '0 auto 45px' },
+  eyebrow: {
+    display: 'block',
+    color: '#38bdf8',
+    letterSpacing: '3px',
+    fontSize: '11px',
+    fontWeight: '900',
+    marginBottom: '10px'
+  },
+  sectionTitle: {
+    fontFamily: "Georgia,'Times New Roman',serif",
+    fontSize: '42px',
+    color: '#f8fafc',
+    margin: '0 0 10px',
+    lineHeight: '1.15'
+  },
+  sectionSubtitle: { color: '#94a3b8', fontSize: '15px', lineHeight: '1.6', margin: 0 },
+  categoryGrid: { display: 'grid', gridTemplateColumns: 'repeat(4,minmax(0,1fr))', gap: '18px' },
+  categoryCard: {
+    padding: '28px 20px',
+    borderRadius: '18px',
+    background: '#090e18',
+    border: '1px solid rgba(0, 166, 255, 0.15)',
+    textAlign: 'center',
+    cursor: 'pointer',
+    transition: 'all .3s ease'
+  },
+  categoryIcon: {
+    width: '65px',
+    height: '65px',
+    borderRadius: '16px',
+    background: '#101a2d',
+    border: '1px solid rgba(0, 210, 255, 0.25)',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    fontSize: '30px',
+    margin: '0 auto 16px',
+    boxShadow: '0 4px 15px rgba(0, 102, 255, 0.15)'
+  },
+  categoryTitle: { fontSize: '17px', margin: '0 0 6px', color: '#f1f5f9' },
+  categorySub: { margin: '0 0 13px', color: '#64748b', fontSize: '13px' },
+  categoryArrow: { fontSize: '13px', color: '#38bdf8', fontWeight: '800' },
+  whySection: {
+    padding: '80px 6%',
+    background: '#090d16',
+    borderTop: '1px solid rgba(0, 166, 255, 0.1)',
+    borderBottom: '1px solid rgba(0, 166, 255, 0.1)'
+  },
+  featureGrid: { display: 'grid', gridTemplateColumns: 'repeat(3,minmax(0,1fr))', gap: '20px' },
+  featureCard: {
+    padding: '30px',
+    background: '#0c1322',
+    border: '1px solid rgba(0, 166, 255, 0.15)',
+    borderRadius: '18px',
+    textAlign: 'center',
+    transition: 'all .3s ease'
+  },
+  featureIcon: {
+    width: '65px',
+    height: '65px',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    margin: '0 auto 18px',
+    background: '#131e36',
+    border: '1px solid rgba(0, 210, 255, 0.35)',
+    borderRadius: '16px',
+    fontSize: '28px',
+    boxShadow: '0 4px 20px rgba(0, 102, 255, 0.2)'
+  },
+  featureTitle: { fontSize: '18px', color: '#f1f5f9', margin: '0 0 10px' },
+  featureDescription: { color: '#94a3b8', fontSize: '14px', lineHeight: '1.65', margin: 0 },
+  whyChooseSection: {
+    padding: '85px 6%',
+    background: '#06080d',
+    position: 'relative',
+    overflow: 'hidden'
+  },
+  whyChooseIntro: {
+    maxWidth: '1000px',
+    margin: '0 auto 35px',
+    padding: '25px 30px',
+    borderRadius: '20px',
+    background: '#0c1322',
+    border: '1px solid rgba(0, 166, 255, 0.2)',
+    display: 'flex',
+    alignItems: 'center',
+    gap: '22px',
+    boxShadow: '0 8px 30px rgba(0,0,0,.6)'
+  },
+  whyChooseIntroIcon: {
+    minWidth: '60px',
+    height: '60px',
+    borderRadius: '16px',
+    background: '#14203a',
+    border: '1px solid rgba(250, 204, 21, 0.4)',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    fontSize: '28px'
+  },
+  whyChooseIntroTitle: { color: '#f8fafc', fontFamily: "Georgia,'Times New Roman',serif", fontSize: '22px', margin: '0 0 7px' },
+  whyChooseIntroText: { color: '#94a3b8', fontSize: '14px', lineHeight: '1.7', margin: 0 },
+  whyChooseGrid: { maxWidth: '1100px', margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(3,minmax(0,1fr))', gap: '20px' },
+  whyChooseCard: {
+    position: 'relative',
+    background: '#0a101d',
+    border: '1px solid rgba(0, 166, 255, 0.15)',
+    borderRadius: '20px',
+    padding: '27px',
+    display: 'flex',
+    alignItems: 'flex-start',
+    gap: '17px',
+    minHeight: '175px',
+    transition: 'all .3s ease',
+    overflow: 'hidden'
+  },
+  whyChooseIcon: {
+    minWidth: '55px',
+    width: '55px',
+    height: '55px',
+    borderRadius: '15px',
+    background: '#131e36',
+    border: '1px solid rgba(0, 210, 255, 0.25)',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    fontSize: '26px'
+  },
+  whyChooseContent: { position: 'relative', zIndex: 2 },
+  whyChooseTitle: { margin: '2px 0 8px', color: '#f1f5f9', fontSize: '17px', fontWeight: '800' },
+  whyChooseDescription: { margin: 0, color: '#94a3b8', fontSize: '13px', lineHeight: '1.65' },
+  whyChooseNumber: {
+    position: 'absolute',
+    right: '15px',
+    bottom: '-14px',
+    fontSize: '62px',
+    fontWeight: '900',
+    color: 'rgba(0, 166, 255, 0.08)',
+    lineHeight: 1
+  },
+  whyChooseBottom: {
+    maxWidth: '1000px',
+    margin: '38px auto 0',
+    display: 'grid',
+    gridTemplateColumns: 'repeat(4,1fr)',
+    gap: '15px',
+    padding: '24px',
+    borderRadius: '20px',
+    background: 'linear-gradient(135deg, #091224 0%, #060910 100%)',
+    border: '1px solid rgba(0, 166, 255, 0.35)',
+    boxShadow: '0 20px 40px rgba(0,0,0,.7), 0 0 25px rgba(0, 102, 255, 0.15)'
+  },
+  whyChooseBottomItem: {
+    textAlign: 'center',
+    color: '#ffffff',
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '5px',
+    borderRight: '1px solid rgba(0, 166, 255, 0.2)'
+  },
+  courseSection: {
+    padding: '80px 6%',
+    background: '#090d16',
+    borderTop: '1px solid rgba(0, 166, 255, 0.12)'
+  },
+  courseHeader: { display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', gap: '25px', marginBottom: '40px', flexWrap: 'wrap' },
+  outlineButton: {
+    border: '1px solid #00a6ff',
+    color: '#38bdf8',
+    background: 'rgba(0, 30, 70, 0.3)',
+    borderRadius: '28px',
+    padding: '12px 24px',
+    fontSize: '14px',
+    fontWeight: '800',
+    cursor: 'pointer',
+    transition: 'all .3s ease'
+  },
+  courseGrid: { display: 'grid', gridTemplateColumns: 'repeat(4,minmax(0,1fr))', gap: '22px' },
+  courseCard: {
+    background: '#0a101d',
+    border: '1px solid rgba(0, 166, 255, 0.15)',
+    borderRadius: '20px',
+    overflow: 'hidden',
+    transition: 'all .3s ease',
+    boxShadow: '0 8px 25px rgba(0,0,0,.5)'
+  },
+  courseImageWrapper: { height: '190px', position: 'relative', overflow: 'hidden' },
+  courseImage: { width: '100%', height: '100%', objectFit: 'cover' },
+  courseImageOverlay: {
+    position: 'absolute',
+    inset: 0,
+    background: 'linear-gradient(0deg, #0a101d 0%, rgba(10, 16, 29, 0.55) 60%, transparent 100%)'
+  },
+  courseTag: {
+    position: 'absolute',
+    top: '15px',
+    left: '15px',
+    color: '#ffffff',
+    padding: '6px 12px',
+    borderRadius: '20px',
+    fontSize: '11px',
+    fontWeight: '800',
+    boxShadow: '0 2px 10px rgba(0,0,0,0.5)'
+  },
+  courseImageLabel: {
+    position: 'absolute',
+    bottom: '12px',
+    left: '16px',
+    color: '#94a3b8',
+    display: 'flex',
+    flexDirection: 'column',
+    fontSize: '10px',
+    letterSpacing: '2px'
+  },
+  courseBody: { padding: '20px' },
+  courseRating: { color: '#facc15', fontSize: '13px', fontWeight: '800', marginBottom: '9px' },
+  courseTitle: { color: '#f1f5f9', fontFamily: "Georgia,'Times New Roman',serif", fontSize: '20px', margin: '0 0 9px', lineHeight: '1.25' },
+  courseDescription: { color: '#94a3b8', fontSize: '13px', lineHeight: '1.55', minHeight: '62px', margin: '0 0 15px' },
+  skillsBox: {
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '6px',
+    padding: '13px',
+    borderRadius: '12px',
+    background: '#0f172a',
+    border: '1px solid rgba(0, 166, 255, 0.12)',
+    color: '#cbd5e1',
+    fontSize: '12px',
+    marginBottom: '17px'
+  },
+  courseFooter: { borderTop: '1px solid rgba(0, 166, 255, 0.12)', paddingTop: '15px', display: 'flex', flexDirection: 'column', gap: '12px' },
+  learningText: { fontSize: '12px', color: '#94a3b8', fontWeight: '700' },
+  courseButton: {
+    width: '100%',
+    border: 'none',
+    background: 'linear-gradient(135deg, #0052cc 0%, #0088ff 100%)',
+    color: '#ffffff',
+    padding: '12px 15px',
+    borderRadius: '25px',
+    fontWeight: '800',
+    cursor: 'pointer',
+    transition: 'all .3s ease',
+    boxShadow: '0 4px 15px rgba(0, 102, 255, 0.35)'
+  },
+  demoSection: {
+    padding: '80px 6%',
+    display: 'grid',
+    gridTemplateColumns: '1fr 1fr',
+    gap: '60px',
+    alignItems: 'center',
+    background: '#06080d'
+  },
+  demoImageBox: {
+    height: '500px',
+    borderRadius: '26px',
+    overflow: 'hidden',
+    position: 'relative',
+    border: '1px solid rgba(0, 166, 255, 0.3)',
+    boxShadow: '0 25px 55px rgba(0,0,0,.8), 0 0 30px rgba(0,102,255,.2)'
+  },
+  demoImage: { width: '100%', height: '100%', objectFit: 'cover' },
+  demoImageOverlay: {
+    position: 'absolute',
+    inset: 0,
+    background: 'linear-gradient(0deg, #06080d 0%, rgba(6, 8, 13, 0.6) 60%, transparent 100%)'
+  },
+  demoQuote: { position: 'absolute', bottom: '30px', left: '30px', color: '#ffffff', display: 'flex', flexDirection: 'column' },
+  quoteIcon: { fontFamily: 'Georgia', fontSize: '50px', color: '#38bdf8', lineHeight: '.7' },
+  demoContent: { maxWidth: '600px' },
+  demoTitle: { fontFamily: "Georgia,'Times New Roman',serif", color: '#f8fafc', fontSize: '42px', lineHeight: '1.15', margin: '0 0 18px' },
+  demoDescription: { color: '#94a3b8', fontSize: '15px', lineHeight: '1.7', marginBottom: '24px' },
+  demoPoints: {
+    display: 'grid',
+    gridTemplateColumns: '1fr 1fr',
+    gap: '12px',
+    marginBottom: '20px',
+    color: '#cbd5e1'
+  },
+  demoNote: {
+    background: '#0c1322',
+    borderLeft: '4px solid #00a6ff',
+    borderTop: '1px solid rgba(0, 166, 255, 0.15)',
+    borderRight: '1px solid rgba(0, 166, 255, 0.15)',
+    borderBottom: '1px solid rgba(0, 166, 255, 0.15)',
+    padding: '15px 18px',
+    borderRadius: '8px',
+    marginBottom: '24px',
+    color: '#e2e8f0'
+  },
+  primaryButtonDark: {
+    border: 'none',
+    background: 'linear-gradient(135deg, #0052cc 0%, #0088ff 100%)',
+    color: '#ffffff',
+    padding: '15px 28px',
+    borderRadius: '28px',
+    fontSize: '15px',
+    fontWeight: '800',
+    cursor: 'pointer',
+    transition: 'all .3s ease',
+    boxShadow: '0 4px 20px rgba(0, 102, 255, 0.4)'
+  },
+  testimonialSection: {
+    padding: '80px 6%',
+    background: '#090d16',
+    textAlign: 'center',
+    borderTop: '1px solid rgba(0, 166, 255, 0.12)',
+    borderBottom: '1px solid rgba(0, 166, 255, 0.12)'
+  },
+  testimonialGrid: { display: 'grid', gridTemplateColumns: 'repeat(3,minmax(0,1fr))', gap: '22px', textAlign: 'left' },
+  testimonialCard: {
+    background: '#0c1322',
+    borderRadius: '20px',
+    padding: '28px',
+    border: '1px solid rgba(0, 166, 255, 0.15)',
+    transition: 'all .3s ease'
+  },
+  testimonialStars: { color: '#facc15', letterSpacing: '3px', marginBottom: '15px' },
+  testimonialQuote: { color: '#94a3b8', lineHeight: '1.7', fontSize: '14px', minHeight: '90px' },
+  userRow: {
+    display: 'flex',
+    alignItems: 'center',
+    gap: '12px',
+    borderTop: '1px solid rgba(0, 166, 255, 0.12)',
+    paddingTop: '17px'
+  },
+  avatar: {
+    width: '44px',
+    height: '44px',
+    borderRadius: '50%',
+    background: 'linear-gradient(135deg, #0052cc 0%, #00a6ff 100%)',
+    color: '#ffffff',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    fontSize: '17px',
+    fontWeight: '800',
+    border: '1px solid rgba(255,255,255,0.2)'
+  },
+  userName: { display: 'block', color: '#f1f5f9' },
+  userRole: { display: 'block', color: '#64748b', fontSize: '12px', marginTop: '3px' },
+  testimonialButton: {
+    marginTop: '35px',
+    padding: '12px 26px',
+    borderRadius: '25px',
+    background: 'transparent',
+    color: '#38bdf8',
+    border: '1px solid #00a6ff',
+    fontWeight: '800',
+    cursor: 'pointer'
+  },
+  finalBanner: {
+    position: 'relative',
+    overflow: 'hidden',
+    padding: '85px 6%',
+    background: 'radial-gradient(ellipse at center, #0a1733 0%, #06080d 85%)',
+    color: '#ffffff',
+    textAlign: 'center',
+    borderTop: '1px solid rgba(0, 166, 255, 0.3)'
+  },
+  finalBannerGlow: {
+    position: 'absolute',
+    width: '450px',
+    height: '450px',
+    borderRadius: '50%',
+    background: 'radial-gradient(circle, rgba(0, 140, 255, 0.2) 0%, transparent 70%)',
+    top: '-200px',
+    right: '-80px'
+  },
+  finalContent: { position: 'relative', zIndex: 2, maxWidth: '850px', margin: '0 auto' },
+  finalEyebrow: { color: '#38bdf8', letterSpacing: '3px', fontSize: '12px', fontWeight: '900' },
+  finalTitle: { fontFamily: "Georgia,'Times New Roman',serif", fontSize: '46px', margin: '14px 0', lineHeight: '1.2' },
+  finalDescription: { fontSize: '16px', color: '#94a3b8', marginBottom: '28px' },
+  finalButtons: { display: 'flex', justifyContent: 'center', gap: '14px', flexWrap: 'wrap' },
+  finalPrimary: {
+    border: '1px solid rgba(255,255,255,0.2)',
+    background: 'linear-gradient(135deg, #0052cc 0%, #0099ff 100%)',
+    color: '#ffffff',
+    padding: '15px 30px',
+    borderRadius: '28px',
+    fontSize: '15px',
+    fontWeight: '900',
+    cursor: 'pointer',
+    boxShadow: '0 4px 20px rgba(0, 102, 255, 0.5)'
+  },
+  finalSecondary: {
+    border: '1px solid rgba(0, 210, 255, 0.5)',
+    background: 'rgba(0, 25, 60, 0.4)',
+    color: '#38bdf8',
+    padding: '14px 28px',
+    borderRadius: '28px',
+    fontSize: '15px',
+    fontWeight: '800',
+    cursor: 'pointer'
+  },
+  whatsappButton: {
+    position: 'fixed',
+    right: '25px',
+    bottom: '25px',
+    width: '60px',
+    height: '60px',
+    borderRadius: '50%',
+    border: 'none',
+    background: '#25D366',
+    color: '#ffffff',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    cursor: 'pointer',
+    zIndex: 9999,
+    boxShadow: '0 8px 25px rgba(37,211,102,.4)',
+    animation: 'whatsappPulse 2s infinite',
+    transition: 'all .3s ease'
+  },
+  whatsappSvg: {
+    display: 'block'
+  }
 };
