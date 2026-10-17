@@ -11,6 +11,9 @@ import Home from './Pages/Home';
 import About from './Pages/About';
 import Contact from './Pages/contact';
 import Courses from './Pages/Courses';
+import CourseStudentDetails from './Pages/CourseStudentDetails';
+import CoursePayment from './Pages/CoursePayment';
+import ConfirmedScreen from './Pages/ConfirmedScreen';
 import WorkshopsScreen from './Pages/WorkshopsScreen';
 import InternshipsScreen from './Pages/InternshipsScreen';
 import ProjectsScreen from './Pages/ProjectsScreen';
@@ -110,7 +113,11 @@ export default function App() {
             <Route path="/workshops" element={<WorkshopsScreen onOpenWorkshopRegister={openWorkshopRegister} />} />
             <Route path="/internships" element={<InternshipsScreen onApplyInternship={handleApplyInternship} />} />
             
+            {/* Course Flow Routes */}
             <Route path="/courses" element={<Courses />} />
+            <Route path="/student-details" element={<CourseStudentDetails />} />
+            <Route path="/payment" element={<CoursePayment />} />
+            <Route path="/confirmation" element={<ConfirmedScreen />} />
             
             {/* Project Routes */}
             <Route path="/btech-projects" element={<ProjectsScreen type="B.Tech" />} />

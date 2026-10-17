@@ -1,13 +1,50 @@
 import React from 'react';
-import { INTERNSHIPS } from '../Data/mockData';
-import { Briefcase, CheckCircle2, Sparkles, ChevronRight } from 'lucide-react';
+import { Briefcase, CheckCircle2, Sparkles, ChevronRight, Clock, Code2 } from 'lucide-react';
+
+// Replaced mockData import with the actual data requested
+const INTERNSHIPS = [
+  {
+    id: 1,
+    duration: '1 Month Internship',
+    title: 'Python Developer Internship',
+    techStack: 'Python, Django, SQLite',
+    price: 999,
+  },
+  {
+    id: 2,
+    duration: '2 Months Internship',
+    title: 'Python + AI Engineer Internship',
+    techStack: 'Python, OpenAI APIs, Vector DBs',
+    price: 1499,
+  },
+  {
+    id: 3,
+    duration: '2 Months Internship',
+    title: 'Data Analytics Track',
+    techStack: 'SQL, Python, Power BI, Excel',
+    price: 1499,
+  },
+  {
+    id: 4,
+    duration: '3 Months Internship',
+    title: 'Full Stack Web Dev Track',
+    techStack: 'React, Node.js, MongoDB, Tailwind',
+    price: 1999,
+  },
+  {
+    id: 5,
+    duration: '2 Months Internship',
+    title: 'QA Automation Engineer',
+    techStack: 'Selenium, Python, Cypress',
+    price: 1499,
+  }
+];
 
 export default function InternshipsScreen({ onApplyInternship }) {
   const highlights = [
-    'Intensive Mentored Training',
-    'Real-Time Product Codebases',
-    'Senior Developer Guidance',
-    'Verifiable Experience Certificate'
+    'Real-time Industry Project',
+    'Dedicated Mentor Support',
+    'Verified Internship Certificate'
   ];
 
   return (
@@ -23,13 +60,14 @@ export default function InternshipsScreen({ onApplyInternship }) {
         <div className="text-center max-w-4xl mx-auto space-y-6">
           <div className="inline-flex items-center space-x-2 bg-[#005BFF]/10 text-[#00D4FF] border border-[#00D4FF]/30 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest shadow-[0_0_15px_rgba(0,212,255,0.2)]">
             <Sparkles className="w-3.5 h-3.5" />
-            <span>Industry Work Experience</span>
+            <span>Industrial Training Programs</span>
           </div>
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-b from-[#ffffff] via-[#EAEFF8] to-[#8b99b3] drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] leading-tight">
-            Paid <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00D4FF] to-[#005BFF]">Internships</span>
+            Paid Internship Programs <br className="hidden md:block" />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00D4FF] to-[#005BFF]">with Real Projects</span>
           </h1>
           <p className="text-[#a4b4cb] max-w-2xl mx-auto text-base sm:text-lg font-medium leading-relaxed">
-            Build practical experience with real product codebases, industry mentoring, and verifiable project delivery to accelerate your engineering career.
+            Gain real company experience, build industry-grade projects, and receive verified completion credentials.
           </p>
         </div>
 
@@ -44,20 +82,32 @@ export default function InternshipsScreen({ onApplyInternship }) {
               <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#005BFF] to-[#00D4FF] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               
               <div className="space-y-6">
-                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#00D4FF]/20 to-[#005BFF]/20 border border-[#00D4FF]/30 flex items-center justify-center text-[#00D4FF] shadow-[0_0_15px_rgba(0,212,255,0.2)] group-hover:scale-110 transition-transform duration-300">
-                  <Briefcase className="w-7 h-7" />
+                <div className="flex items-center justify-between">
+                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#00D4FF]/20 to-[#005BFF]/20 border border-[#00D4FF]/30 flex items-center justify-center text-[#00D4FF] shadow-[0_0_15px_rgba(0,212,255,0.2)] group-hover:scale-110 transition-transform duration-300">
+                    <Briefcase className="w-7 h-7" />
+                  </div>
+                  <div className="flex items-center space-x-1.5 text-xs font-bold text-[#00D4FF] bg-[#005BFF]/10 px-3 py-1.5 rounded-full border border-[#005BFF]/20">
+                    <Clock className="w-3.5 h-3.5" />
+                    <span>{prog.duration}</span>
+                  </div>
                 </div>
                 
-                <h3 className="text-2xl font-bold text-[#EAEFF8] leading-snug group-hover:text-[#00D4FF] transition-colors duration-300">
-                  {prog.title}
-                </h3>
+                <div>
+                  <h3 className="text-2xl font-bold text-[#EAEFF8] leading-snug group-hover:text-[#00D4FF] transition-colors duration-300 mb-2">
+                    {prog.title}
+                  </h3>
+                  <div className="flex items-start space-x-2 text-sm text-[#8b99b3]">
+                    <Code2 className="w-4 h-4 shrink-0 mt-0.5 text-[#005BFF]" />
+                    <p><span className="font-semibold text-[#a4b4cb]">Tech Stack:</span> {prog.techStack}</p>
+                  </div>
+                </div>
                 
                 <div className="flex items-baseline space-x-2">
                   <span className="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-b from-white to-[#C0C8D6]">
                     ₹{prog.price.toLocaleString('en-IN')}
                   </span>
                   <span className="text-xs text-[#8b99b3] font-medium uppercase tracking-wider">
-                    Total Fee
+                    One-time fee
                   </span>
                 </div>
 
@@ -79,7 +129,7 @@ export default function InternshipsScreen({ onApplyInternship }) {
               >
                 {/* Button Shine Effect */}
                 <div className="absolute top-0 -inset-full h-full w-1/2 z-5 block transform -skew-x-12 bg-gradient-to-r from-transparent to-white opacity-20 group-hover/btn:animate-[shine_1.5s_ease-in-out_infinite]" />
-                <span className="relative z-10 tracking-wide">Apply Now</span>
+                <span className="relative z-10 tracking-wide">Apply & Register</span>
                 <ChevronRight className="w-4 h-4 relative z-10" />
               </button>
             </div>
