@@ -18,11 +18,12 @@ import WorkshopsScreen from './Pages/WorkshopsScreen';
 import InternshipsScreen from './Pages/InternshipsScreen';
 import ProjectsScreen from './Pages/ProjectsScreen';
 import ProjectEnquiryScreen from './Pages/ProjectEnquiryScreen';
-
+import TermsAndConditions from './Pages/termsandconditions';
+import PrivacyPolicy from './Pages/privacypolicy';
 // Modals
-import BookSlotModal from './Pages/BookSlotModal';
-import ConfirmationModal from './Pages/ConfirmationModal';
-import PaymentModal from './Pages/PaymentModal';
+import BookSlotModal from './Pages/carrerBookSlotModal';
+import ConfirmationModal from './Pages/carrerConfirmationModal';
+import PaymentModal from './Pages/carrerPaymentModal';
 import StudentDetailsModal from './Pages/StudentDetailsModal';
 import WorkshopRegisterModal from './Pages/WorkshopRegisterModal';
 
@@ -30,69 +31,76 @@ import WorkshopRegisterModal from './Pages/WorkshopRegisterModal';
 import CareerGuidanceScreen from './components/CareerGuidanceScreen';
 
 export default function App() {
-  // ----------------------------------------------------
-  // GLOBAL MODAL STATES
-  // ----------------------------------------------------
+  // Global Modal States
   const [slotModalOpen, setSlotModalOpen] = useState(false);
   const [studentModalOpen, setStudentModalOpen] = useState(false);
   const [paymentModalOpen, setPaymentModalOpen] = useState(false);
   const [confirmModalOpen, setConfirmModalOpen] = useState(false);
   const [workshopModalOpen, setWorkshopModalOpen] = useState(false);
 
-  // ----------------------------------------------------
-  // CONFIGURATION STATES
-  // ----------------------------------------------------
+  // Career Guidance Data Accumulator
   const [guidanceConfig, setGuidanceConfig] = useState({ duration: '30 Minutes', price: 49 });
-  const [bookingMeta, setBookingMeta] = useState({});
+  const [careerPayload, setCareerPayload] = useState({
+    bookingDetails: {},
+    studentDetails: {}
+  });
+  
+  // API Response Data for Confirmation
+  const [finalBookingData, setFinalBookingData] = useState(null);
+  
   const [paymentConfig, setPaymentConfig] = useState({ fee: 29, title: '' });
   const [selectedWorkshop, setSelectedWorkshop] = useState(null);
 
-  // ----------------------------------------------------
-  // CAREER GUIDANCE FLOW
-  // ----------------------------------------------------
+  // --- CAREER GUIDANCE FLOW ---
   const startGuidanceBooking = (config) => {
     setGuidanceConfig(config);
     setSlotModalOpen(true);
   };
 
   const handleSlotSelected = (slotData) => {
-    setBookingMeta((prev) => ({ ...prev, ...slotData }));
+    setCareerPayload((prev) => ({
+      ...prev,
+      bookingDetails: {
+        duration: slotData.duration,
+        totalSessionPrice: slotData.totalSessionPrice,
+        date: slotData.date,
+        startTime: slotData.startTime,
+        endTime: slotData.endTime
+      }
+    }));
     setSlotModalOpen(false);
     setStudentModalOpen(true);
   };
 
   const handleStudentDetailsSubmitted = (studentData) => {
-    setBookingMeta((prev) => ({ ...prev, ...studentData }));
+    setCareerPayload((prev) => ({
+      ...prev,
+      studentDetails: studentData
+    }));
     setStudentModalOpen(false);
-    setPaymentConfig({ fee: guidanceConfig.price, title: `Career Guidance: ${guidanceConfig.duration}` });
+    setPaymentConfig({ fee: careerPayload.bookingDetails.totalSessionPrice || guidanceConfig.price, title: `Career Guidance: ${careerPayload.bookingDetails.duration || guidanceConfig.duration}` });
     setPaymentModalOpen(true);
   };
 
-  const handlePaymentSuccess = () => {
+  const handlePaymentSuccess = (apiResponseData) => {
+    setFinalBookingData(apiResponseData);
     setPaymentModalOpen(false);
     setConfirmModalOpen(true);
   };
 
-  // ----------------------------------------------------
-  // WORKSHOP FLOW
-  // ----------------------------------------------------
+  // --- WORKSHOP & INTERNSHIP FLOWS (Unchanged) ---
   const openWorkshopRegister = (workshop) => {
     setSelectedWorkshop(workshop);
     setWorkshopModalOpen(true);
   };
 
   const handleWorkshopProceedToPay = ({ feeAmount, itemTitle, meta }) => {
-    setBookingMeta((prev) => ({ ...prev, ...meta }));
     setWorkshopModalOpen(false);
     setPaymentConfig({ fee: feeAmount, title: itemTitle });
     setPaymentModalOpen(true);
   };
 
-  // ----------------------------------------------------
-  // INTERNSHIP FLOW
-  // ----------------------------------------------------
   const handleApplyInternship = (internship) => {
-    setBookingMeta({ type: 'Internship', title: internship.title });
     setPaymentConfig({ fee: internship.price, title: `Internship Registration: ${internship.title}` });
     setPaymentModalOpen(true);
   };
@@ -100,7 +108,6 @@ export default function App() {
   return (
     <Router>
       <div className="min-h-screen bg-[#000000] text-[#EAEFF8] flex flex-col font-sans selection:bg-[#00D4FF] selection:text-[#000000]">
-        
         <Header />
         <Navbar />
 
@@ -108,32 +115,28 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Home onOpenGuidanceBooking={() => startGuidanceBooking({ duration: '30 Minutes', price: 49 })} />} />
             
-            {/* Pages passed with specific triggers for the modals */}
             <Route path="/guidance" element={<CareerGuidanceScreen onStartBooking={startGuidanceBooking} />} />
             <Route path="/workshops" element={<WorkshopsScreen onOpenWorkshopRegister={openWorkshopRegister} />} />
             <Route path="/internships" element={<InternshipsScreen onApplyInternship={handleApplyInternship} />} />
             
-            {/* Course Flow Routes */}
             <Route path="/courses" element={<Courses />} />
             <Route path="/student-details" element={<CourseStudentDetails />} />
             <Route path="/payment" element={<CoursePayment />} />
             <Route path="/confirmation" element={<ConfirmedScreen />} />
             
-            {/* Project Routes */}
             <Route path="/btech-projects" element={<ProjectsScreen type="B.Tech" />} />
             <Route path="/mtech-projects" element={<ProjectsScreen type="M.Tech" />} />
             <Route path="/project-enquiry" element={<ProjectEnquiryScreen />} />
             
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/privacypolicy" element={<PrivacyPolicy/>}/>
+            <Route path="/termsconditions" element={<TermsAndConditions/>}/>
           </Routes>
         </main>
 
         <Footer />
 
-        {/* ---------------------------------------------------- */}
-        {/* GLOBAL MODALS (Hidden until triggered by a page) */}
-        {/* ---------------------------------------------------- */}
         <BookSlotModal 
           isOpen={slotModalOpen} 
           onClose={() => setSlotModalOpen(false)} 
@@ -150,12 +153,13 @@ export default function App() {
           onClose={() => setPaymentModalOpen(false)} 
           feeAmount={paymentConfig.fee} 
           itemTitle={paymentConfig.title} 
+          careerPayload={careerPayload}
           onPaySuccess={handlePaymentSuccess} 
         />
         <ConfirmationModal 
           isOpen={confirmModalOpen} 
           onClose={() => setConfirmModalOpen(false)} 
-          bookingData={bookingMeta} 
+          bookingData={finalBookingData} 
         />
         <WorkshopRegisterModal 
           isOpen={workshopModalOpen} 

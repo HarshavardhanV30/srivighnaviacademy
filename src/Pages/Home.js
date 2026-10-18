@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import javaLogo from '../assets/Java-Logo.png';
 import pythonLogo from '../assets/python logo.jpeg';
 import javaFullStack from '../assets/full stack java.jpeg';
@@ -10,11 +11,11 @@ import genaiLogo from '../assets/genai logo.png';
 import javaSqlLogo from '../assets/java with sql combo.png';
 import pythonSqlLogo from '../assets/python with sql logo.png';
 
-export default function Home({ setActiveScreen }) {
-  const go = (screenKey) => {
-    if (typeof setActiveScreen === 'function') {
-      setActiveScreen(screenKey);
-    }
+export default function Home(props) {
+  const navigate = useNavigate();
+
+  const go = (path) => {
+    navigate(`/${path}`);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
@@ -665,7 +666,7 @@ export default function Home({ setActiveScreen }) {
         <button
           className="outline-button"
           style={styles.testimonialButton}
-          onClick={() => go('contact')}
+          onClick={() => go('about')}
         >
           Read More Success Stories →
         </button>

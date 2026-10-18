@@ -155,7 +155,7 @@ export default function ProjectsScreen({ type = 'B.Tech' }) {
 
             <div className="space-y-4 pr-8">
               <span className="inline-block text-[10px] font-extrabold uppercase tracking-wider px-3 py-1 rounded-md bg-[#005BFF]/20 text-[#00D4FF] border border-[#005BFF]/40 shadow-[0_0_15px_rgba(0,212,255,0.3)]">
-                {selectedProject.category} • {selectedProject.degree}
+                {selectedProject.category} | {selectedProject.degree}
               </span>
               <h2 className="text-2xl sm:text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-white to-[#C0C8D6] leading-tight">
                 {selectedProject.title}
