@@ -3,12 +3,14 @@
   "version": "1.0.0",
   "private": true,
   "dependencies": {
-    "lucide-react": "0.300.0",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "react-icons": "5.0.1",
-    "react-router-dom": "6.22.0",
-    "react-scripts": "5.0.1"
+    "lucide-react": "^0.300.0",
+    "qrcode.react": "^4.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^5.0.1",
+    "react-router-dom": "^7.18.4",
+    "react-scripts": "5.0.1",
+    "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -32,9 +34,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "overrides": {
-    "ajv": "^6.12.6",
-    "schema-utils": "^3.0.0"
   }
 }

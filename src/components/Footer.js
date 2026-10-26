@@ -12,28 +12,30 @@ export default function Footer() {
     <footer className="w-full bg-black text-neutral-400 border-t border-neutral-800 transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
+
           {/* Brand Info */}
           <div className="space-y-4">
-            <Link 
-              to="/" 
+            <Link
+              to="/"
               onClick={scrollToTop}
-              className="flex items-center space-x-3 cursor-pointer group"
+              className="inline-flex items-center cursor-pointer group"
             >
               <img
                 src={academyLogo}
                 alt="Vighnavi Academy Logo"
-                className="h-10 w-auto object-contain transition-transform group-hover:scale-105"
+                width="240"
+                height="80"
+                className="block w-[200px] h-[66px] sm:w-[220px] sm:h-[73px] lg:w-[240px] lg:h-[80px] max-w-full object-contain object-left transition-transform duration-300 group-hover:scale-[1.02]"
                 onError={(e) => {
                   e.currentTarget.style.display = 'none';
                 }}
               />
-              <span className="text-xl font-extrabold tracking-tight text-white">
-                Vighnavi Academy
-              </span>
             </Link>
+
             <p className="text-xs text-neutral-400 leading-relaxed">
               Empowering engineers and tech enthusiasts with hands-on development, career guidance, and live mentorship.
             </p>
+
             <div className="pt-2 text-xs text-neutral-500 font-mono">
               Wisdom • Knowledge • Success
             </div>
@@ -117,14 +119,17 @@ export default function Footer() {
                 <MapPin className="w-4 h-4 text-white mt-0.5 flex-shrink-0" />
                 <span>Hyderabad / Bangalore Tech Hubs, India</span>
               </div>
+
               <div className="flex items-center space-x-3">
                 <Phone className="w-4 h-4 text-white flex-shrink-0" />
                 <span>+91 93906 42779</span>
               </div>
+
               <div className="flex items-center space-x-3">
                 <Mail className="w-4 h-4 text-white flex-shrink-0" />
                 <span>support@vighnaviacademy.com</span>
               </div>
+
               <div className="pt-2">
                 <Link
                   to="/contact"
@@ -141,8 +146,11 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="mt-12 pt-6 border-t border-neutral-800 flex flex-col sm:flex-row items-center justify-between text-xs text-neutral-500 gap-4">
-          <p>© {new Date().getFullYear()} Vighnavi Academy. All rights reserved.</p>
-          <div className="flex space-x-6">
+          <p>
+            © {new Date().getFullYear()} Vighnavi Academy. All rights reserved.
+          </p>
+
+          <div className="flex flex-wrap justify-center gap-x-6 gap-y-2">
             <Link to="/about" onClick={scrollToTop} className="hover:text-white transition">
               About Us
             </Link>
